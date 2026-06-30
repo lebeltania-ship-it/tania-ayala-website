@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tania Ayala Fajas Colombianas — Expert wood body sculpting and maderotherapy. Reshape, firm, and transform your body naturally.">
-  <title>Tania Ayala | Fajas Colombianas & Wood Body Sculpting</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Tania Ayala Body Sculpting — Brazilian & European lymphatic drainage, wood body sculpting, manual sculpting, face sculpting, anti-cellulite wood therapy, and pre & post-op plastic surgery aftercare.">
+  <title>Tania Ayala Body Sculpting | Wood Therapy & Lymphatic Drainage Massage</title>
+  <link rel="stylesheet" href="styles.css?v=21">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Mobile nav backdrop overlay (Fix 6) -->
+  <!-- Mobile nav backdrop overlay -->
   <div class="nav-overlay" id="navOverlay"></div>
 
   <!-- ===================== NAVBAR ===================== -->
@@ -20,76 +20,172 @@
     <div class="nav-container">
       <a href="#home" class="nav-logo">
         <span class="logo-main">Tania Ayala</span>
-        <span class="logo-sub">Fajas Colombianas</span>
+        <span class="logo-sub">Body Sculpting</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#booking" class="nav-cta">Book Now</a></li>
+        <li><a href="#about"        data-i18n="nav.about">About</a></li>
+        <li><a href="#services"     data-i18n="nav.services">Services</a></li>
+        <li><a href="#care"         data-i18n="nav.care">After Care</a></li>
+        <li><a href="#shop"         data-i18n="nav.shop">Spa Shop</a></li>
+        <li><a href="#testimonials" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="#contact"      data-i18n="nav.contact">Contact</a></li>
+        <li><a href="#booking" class="nav-cta" data-i18n="nav.book">Book Now</a></li>
       </ul>
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
     </div>
   </nav>
 
   <!-- ===================== HERO ===================== -->
   <header class="hero" id="home">
+    <!--
+      ══ HOW TO ADD YOUR MASSAGE PHOTO ══
+      1. Save your photo as  hero-massage.jpg  in this same folder
+      2. Add  style="background-image:url('hero-massage.jpg')"  to the div below
+      The dark overlay will keep text readable automatically.
+    -->
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Welcome to</p>
-      <h1 class="hero-title">Tania Ayala<br><em>Fajas Colombianas</em></h1>
-      <p class="hero-tagline">Expert wood body sculpting &amp; maderotherapy<br>Reshape · Firm · Transform — naturally</p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Máster Body Sculptor</p>
+      <h1 class="hero-title">Tania Ayala<br><em>Body Sculpting</em></h1>
+      <p class="hero-tagline" data-i18n-html="hero.tagline">
+        Wood Body Sculpting · Manual Sculpting · Face Sculpting · Turkey Neck<br>
+        Brazilian &amp; European Lymphatic Drainage · BBL Recovery · Anti-Cellulite
+      </p>
       <div class="hero-btns">
-        <a href="#booking" class="btn btn-primary">Book Your Session</a>
-        <a href="#services" class="btn btn-ghost">See Our Services</a>
+        <a href="#booking" class="btn btn-primary" data-i18n="hero.btn.book">Request an Appointment</a>
+        <a href="#services" class="btn btn-ghost"  data-i18n="hero.btn.explore">Explore Services</a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
+<div class="hero-scroll-hint">
       <span>Scroll to explore</span>
       <div class="scroll-arrow"></div>
     </div>
   </header>
+
+  <!-- ===================== BRAND STRIP ===================== -->
+  <div class="brand-strip">
+    <div class="brand-strip-inner">
+      <span class="brand-strip-item" data-i18n="brand.wood">Wood Body Sculpting</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.manual">Manual Sculpting</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.face">Face Sculpting</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.lymphatic">Brazilian &amp; European Lymphatic Drainage</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.detox">Wood Therapy</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.anticell">Anti-Cellulite</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.bbl">BBL Recovery</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.preop">Pre &amp; Post-Op Care</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.tummy">Tummy Tuck Recovery</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.breast">Breast Surgery Aftercare</span>
+      <span class="brand-strip-sep"></span>
+      <span class="brand-strip-item" data-i18n="brand.turkey">Turkey Neck Treatment</span>
+    </div>
+  </div>
+
+  <!-- ===================== SERVICES SPOTLIGHT ===================== -->
+  <div class="spotlight-strip">
+    <div class="container">
+      <div class="spotlight-inner">
+
+        <div class="spotlight-item">
+          <div class="spotlight-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4.5 12.5c1-3 4-5 7.5-5s6.5 2 7.5 5"/><path d="M9 17c1 1.5 2.5 2 3 2s2-.5 3-2"/><path d="M12 7V3M8 8L5 5M16 8l3-3"/></svg>
+          </div>
+          <span class="spotlight-label" data-i18n-html="spot.lymph.label">Lymphatic<br>Drainage</span>
+          <span class="spotlight-sub" data-i18n="spot.lymph.sub">Flush toxins · reduce swelling</span>
+        </div>
+
+        <div class="spotlight-item">
+          <div class="spotlight-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="5"/><path d="M9 13c-2.5 1-4 3-4 5h14c0-2-1.5-4-4-5"/><path d="M10 10c0 1.1.9 2 2 2s2-.9 2-2"/></svg>
+          </div>
+          <span class="spotlight-label" data-i18n-html="spot.face.label">Face<br>Sculpting</span>
+          <span class="spotlight-sub" data-i18n="spot.face.sub">Lift · contour · rejuvenate</span>
+        </div>
+
+        <div class="spotlight-item">
+          <div class="spotlight-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="8" width="16" height="10" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><path d="M9 13h6M12 11v4"/></svg>
+          </div>
+          <span class="spotlight-label" data-i18n-html="spot.wood.label">Wood<br>Therapy</span>
+          <span class="spotlight-sub" data-i18n="spot.wood.sub">Sculpt · tone · detox</span>
+        </div>
+
+        <div class="spotlight-item">
+          <div class="spotlight-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="spotlight-label" data-i18n-html="spot.preop.label">Pre-Op<br>Preparation</span>
+          <span class="spotlight-sub" data-i18n="spot.preop.sub">Prepare your body for surgery</span>
+        </div>
+
+        <div class="spotlight-item">
+          <div class="spotlight-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <span class="spotlight-label" data-i18n-html="spot.postop.label">Post-Op<br>Recovery</span>
+          <span class="spotlight-sub" data-i18n="spot.postop.sub">Heal faster · prevent fibrosis</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <!-- ===================== ABOUT ===================== -->
   <section id="about" class="section about-section">
     <div class="container">
       <div class="about-grid">
         <div class="about-image-wrap">
-          <div class="placeholder-img about-ph">
-            <div class="ph-inner">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add Your Photo Here</span>
+          <div class="about-photo-frame">
+            <img src="images/about-tania.png" alt="Tania Ayala — Máster Body Sculptor" class="about-real-photo">
+            <!-- Placeholder shown only when photo is missing -->
+            <div class="about-photo-placeholder">
+              <div class="ph-inner">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                <span>about-tania.jpg</span>
+              </div>
             </div>
           </div>
-          <div class="about-badge">
-            <strong>100%</strong>
-            <span>Natural</span>
+          <div class="about-credential">
+            <span class="about-cred-title">Máster Body Sculptor</span>
+            <span class="about-cred-name">Tania Ayala</span>
           </div>
         </div>
+
         <div class="about-content">
-          <p class="eyebrow">About Us</p>
-          <h2>The Art of Wood Body Sculpting</h2>
-          <p>At <strong>Tania Ayala Fajas Colombianas</strong>, we specialize in <strong>maderotherapy</strong> — an ancient Colombian technique using hand-carved wooden tools to reshape, firm, and contour the body without surgery.</p>
-          <p>Our treatments target cellulite, improve lymphatic drainage, break down fatty deposits, and sculpt your natural curves. Combined with authentic <strong>fajas colombianas</strong>, we deliver visible, lasting results session after session.</p>
+          <p class="eyebrow" data-i18n="about.eyebrow">Meet Your Specialist</p>
+          <h2 data-i18n="about.h2">Expert Care for Every Stage of Your Journey</h2>
+          <p data-i18n-html="about.p1"><strong>Tania Ayala</strong> is a certified Máster Body Sculptor specializing in <strong>wood body sculpting</strong>, <strong>manual sculpting</strong>, <strong>face sculpting</strong>, and <strong>Brazilian &amp; European lymphatic drainage</strong>. Wood therapy naturally breaks down fat, eliminates cellulite, tightens skin, and sculpts your contour — while lymphatic drainage detoxifies, reduces inflammation, and accelerates healing from the inside out.</p>
+          <p data-i18n-html="about.p2">Whether you want to reshape your body, rejuvenate your face, or recover from a BBL, tummy tuck, or liposuction — Tania's specialized protocols deliver <strong>real, visible results</strong> through 100% natural, non-surgical techniques. Every session is fully personalized to your body and your goals.</p>
           <div class="stats-row">
             <div class="stat">
               <span class="stat-n">500+</span>
-              <span class="stat-l">Happy Clients</span>
+              <span class="stat-l" data-i18n="about.stat1">Happy Clients</span>
             </div>
             <div class="stat">
-              <span class="stat-n">5+</span>
-              <span class="stat-l">Years Experience</span>
+              <span class="stat-n">10+</span>
+              <span class="stat-l" data-i18n="about.stat2">Years Experience</span>
             </div>
             <div class="stat">
-              <span class="stat-n">0</span>
-              <span class="stat-l">Surgery Needed</span>
+              <span class="stat-n">100%</span>
+              <span class="stat-l" data-i18n="about.stat3">Natural Methods</span>
             </div>
           </div>
-          <a href="#booking" class="btn btn-primary">Start Your Journey</a>
+          <a href="#booking" class="btn btn-primary" data-i18n="about.btn">Start Your Journey</a>
         </div>
       </div>
     </div>
@@ -98,60 +194,52 @@
   <!-- ===================== SERVICES / TOOLS ===================== -->
   <section id="services" class="section services-section">
     <div class="container">
-      <p class="eyebrow text-center">Our Tools &amp; Techniques</p>
-      <h2 class="text-center">Wood Sculpting Tools</h2>
-      <p class="section-sub text-center">Each tool is handcrafted and targets specific areas. Drag the slider on each photo to see real before &amp; after results.</p>
+      <p class="eyebrow text-center" data-i18n="svc.eyebrow">Our Treatments</p>
+      <h2 class="text-center" data-i18n="svc.h2">Lymphatic &amp; Wood Sculpting</h2>
+      <p class="section-sub text-center" data-i18n="svc.sub">Each technique is tailored to your body and goals. Drag the slider on each photo to see real before &amp; after results.</p>
 
-      <!-- Tool 1 -->
+      <!-- Treatment 1 — Lymphatic Roller -->
       <div class="tool-card">
         <div class="tool-info">
           <div class="tool-number">01</div>
-          <h3>Rodillo Linfático</h3>
-          <p class="tool-subtitle">Lymphatic Roller</p>
-          <p class="tool-desc">The cylindrical roller glides over the legs, thighs, and abdomen to stimulate lymphatic drainage, reduce fluid retention, and visibly smooth cellulite.</p>
+          <h3 data-i18n="t1.h3">Lymphatic Drainage Massage</h3>
+          <p class="tool-subtitle" data-i18n="t1.sub">Rodillo Linfático</p>
+          <p class="tool-desc" data-i18n="t1.desc">A gentle yet deeply effective technique using the cylindrical lymphatic roller along the legs, thighs, and abdomen. It stimulates the lymphatic system to flush toxins, reduce fluid retention, relieve post-surgery swelling, and visibly smooth cellulite — leaving skin lighter and refreshed.</p>
           <ul class="benefits">
-            <li>Reduces cellulite appearance</li>
-            <li>Boosts blood circulation</li>
-            <li>Eliminates fluid retention</li>
-            <li>Smooths skin texture</li>
+            <li data-i18n="t1.b1">Reduces inflammation &amp; fluid retention</li>
+            <li data-i18n="t1.b2">Boosts lymph flow &amp; blood circulation</li>
+            <li data-i18n="t1.b3">Smooths cellulite appearance</li>
+            <li data-i18n="t1.b4">Ideal for post-surgery recovery</li>
           </ul>
         </div>
         <div class="tool-ba">
           <div class="ba-wrap" data-ba="1">
-            <div class="ba-after">
-              <div class="placeholder-img after-ph">
-                <div class="ph-inner"><span>AFTER — Add Photo</span></div>
-              </div>
-            </div>
-            <div class="ba-before">
-              <div class="placeholder-img before-ph">
-                <div class="ph-inner"><span>BEFORE — Add Photo</span></div>
-              </div>
-            </div>
+            <div class="ba-after  ba-split" style="background-image:url('images/lymphatic-results.jpg');background-position:right center;"></div>
+            <div class="ba-before ba-split" style="background-image:url('images/lymphatic-results.jpg');background-position:left center;"></div>
             <div class="ba-handle">
               <div class="ba-line"></div>
               <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#9b4f63" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#C9A84C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
-            <span class="ba-tag ba-tag-l">Before</span>
-            <span class="ba-tag ba-tag-r">After</span>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
           </div>
         </div>
       </div>
 
-      <!-- Tool 2 -->
+      <!-- Treatment 2 — Body Contouring Paddle -->
       <div class="tool-card tool-card-flip">
         <div class="tool-info">
           <div class="tool-number">02</div>
-          <h3>Raqueta Corporal</h3>
-          <p class="tool-subtitle">Body Contouring Paddle</p>
-          <p class="tool-desc">The flat wooden paddle applies firm, sweeping strokes to break down stubborn fat deposits, define the waist, and sculpt the hips for a more hourglass silhouette.</p>
+          <h3 data-i18n="t2.h3">Wood Body Sculpting</h3>
+          <p class="tool-subtitle" data-i18n="t2.sub">Raqueta Corporal</p>
+          <p class="tool-desc" data-i18n="t2.desc">The flat wooden paddle applies firm, sweeping strokes across the waist, hips, and abdomen to break down stubborn fat deposits and sculpt an hourglass silhouette. This technique activates collagen production and tightens loose skin for a firmer, more defined shape.</p>
           <ul class="benefits">
-            <li>Defines waist &amp; hips</li>
-            <li>Breaks down fat deposits</li>
-            <li>Sculpts hourglass figure</li>
-            <li>Tones the abdomen</li>
+            <li data-i18n="t2.b1">Defines waist &amp; sculpts hips</li>
+            <li data-i18n="t2.b2">Breaks down deep fat deposits</li>
+            <li data-i18n="t2.b3">Tightens and tones loose skin</li>
+            <li data-i18n="t2.b4">Stimulates collagen production</li>
           </ul>
         </div>
         <div class="tool-ba">
@@ -169,27 +257,27 @@
             <div class="ba-handle">
               <div class="ba-line"></div>
               <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#9b4f63" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#C9A84C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
-            <span class="ba-tag ba-tag-l">Before</span>
-            <span class="ba-tag ba-tag-r">After</span>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
           </div>
         </div>
       </div>
 
-      <!-- Tool 3 -->
+      <!-- Treatment 3 — Wood Cupping -->
       <div class="tool-card">
         <div class="tool-info">
           <div class="tool-number">03</div>
-          <h3>Ventosas de Madera</h3>
-          <p class="tool-subtitle">Wood Vacuum Cups</p>
-          <p class="tool-desc">Vacuum suction cups create negative pressure that lifts skin and underlying tissue, stimulating collagen production and improving elasticity for firmer, lifted contours.</p>
+          <h3 data-i18n="t3.h3">Wood Cupping Therapy</h3>
+          <p class="tool-subtitle" data-i18n="t3.sub">Ventosas de Madera</p>
+          <p class="tool-desc" data-i18n="t3.desc">Wooden vacuum cups create gentle negative pressure that lifts the skin and underlying tissue — drawing out toxins, breaking adhesions, and increasing oxygen-rich blood flow to the area. The result is firmer, more elastic skin with improved tone and reduced stretch marks.</p>
           <ul class="benefits">
-            <li>Lifts and firms sagging skin</li>
-            <li>Stimulates collagen production</li>
-            <li>Fades stretch marks</li>
-            <li>Improves skin elasticity</li>
+            <li data-i18n="t3.b1">Lifts and firms sagging skin</li>
+            <li data-i18n="t3.b2">Breaks down scar tissue &amp; adhesions</li>
+            <li data-i18n="t3.b3">Fades stretch marks over time</li>
+            <li data-i18n="t3.b4">Detoxifying &amp; deeply restorative</li>
           </ul>
         </div>
         <div class="tool-ba">
@@ -207,27 +295,27 @@
             <div class="ba-handle">
               <div class="ba-line"></div>
               <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#9b4f63" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#C9A84C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
-            <span class="ba-tag ba-tag-l">Before</span>
-            <span class="ba-tag ba-tag-r">After</span>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
           </div>
         </div>
       </div>
 
-      <!-- Tool 4 -->
+      <!-- Treatment 4 — Reducing Board -->
       <div class="tool-card tool-card-flip">
         <div class="tool-info">
           <div class="tool-number">04</div>
-          <h3>Tabla Reductora</h3>
-          <p class="tool-subtitle">Reducing Wood Board</p>
-          <p class="tool-desc">The flat reducing board is essential for post-surgical recovery and general contouring. It redistributes fat, flattens the abdomen, and smooths lumps and fibrosis.</p>
+          <h3 data-i18n="t4.h3">Post-Surgery Contouring</h3>
+          <p class="tool-subtitle" data-i18n="t4.sub">Tabla Reductora</p>
+          <p class="tool-desc" data-i18n="t4.desc">The flat reducing board is essential for post-surgical recovery (BBL, liposuction, tummy tuck) and general body contouring. It redistributes fat evenly, flattens the abdomen, and treats fibrosis and lumps — accelerating healing and optimizing your surgical results.</p>
           <ul class="benefits">
-            <li>Post-lipo &amp; BBL recovery</li>
-            <li>Flattens the abdomen</li>
-            <li>Treats fibrosis &amp; lumps</li>
-            <li>Redistributes fat evenly</li>
+            <li data-i18n="t4.b1">Post-lipo, BBL &amp; tummy tuck recovery</li>
+            <li data-i18n="t4.b2">Flattens abdomen &amp; treats fibrosis</li>
+            <li data-i18n="t4.b3">Redistributes fat evenly</li>
+            <li data-i18n="t4.b4">Speeds up healing &amp; reduces bruising</li>
           </ul>
         </div>
         <div class="tool-ba">
@@ -245,27 +333,27 @@
             <div class="ba-handle">
               <div class="ba-line"></div>
               <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#9b4f63" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#C9A84C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
-            <span class="ba-tag ba-tag-l">Before</span>
-            <span class="ba-tag ba-tag-r">After</span>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
           </div>
         </div>
       </div>
 
-      <!-- Tool 5 -->
+      <!-- Treatment 5 — Mushroom Tool -->
       <div class="tool-card">
         <div class="tool-info">
           <div class="tool-number">05</div>
-          <h3>Hongo de Madera</h3>
-          <p class="tool-subtitle">Wood Mushroom Tool</p>
-          <p class="tool-desc">The mushroom-shaped tool delivers deep targeted pressure on specific trouble spots — ideal for sculpting flanks, inner thighs, and back for precise body contouring.</p>
+          <h3 data-i18n="t5.h3">Deep Spot Sculpting</h3>
+          <p class="tool-subtitle" data-i18n="t5.sub">Hongo de Madera</p>
+          <p class="tool-desc" data-i18n="t5.desc">The mushroom-shaped wood tool delivers deep, targeted pressure on specific problem areas — flanks, inner thighs, back rolls, and arms. Perfect for precise spot contouring and breaking up deep fat pockets that resist diet and exercise alone.</p>
           <ul class="benefits">
-            <li>Deep targeted pressure</li>
-            <li>Sculpts flanks &amp; back</li>
-            <li>Inner thigh contouring</li>
-            <li>Breaks deep fat pockets</li>
+            <li data-i18n="t5.b1">Deep targeted pressure therapy</li>
+            <li data-i18n="t5.b2">Sculpts flanks, back &amp; inner thighs</li>
+            <li data-i18n="t5.b3">Breaks up stubborn fat pockets</li>
+            <li data-i18n="t5.b4">Precise, customized contouring</li>
           </ul>
         </div>
         <div class="tool-ba">
@@ -283,11 +371,11 @@
             <div class="ba-handle">
               <div class="ba-line"></div>
               <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#9b4f63" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#C9A84C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
-            <span class="ba-tag ba-tag-l">Before</span>
-            <span class="ba-tag ba-tag-r">After</span>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
           </div>
         </div>
       </div>
@@ -295,157 +383,443 @@
     </div>
   </section>
 
-  <!-- ===================== PRICING ===================== -->
-  <section id="pricing" class="section pricing-section">
+  <!-- ===================== SURGICAL CARE DIVIDER ===================== -->
+  <div class="surgical-banner">
     <div class="container">
-      <p class="eyebrow text-center">Transparent Pricing</p>
-      <h2 class="text-center">Choose Your Package</h2>
-      <p class="section-sub text-center">All sessions include a personal consultation and a custom treatment plan.</p>
+      <p class="eyebrow text-center" data-i18n="surgical.eyebrow">Specialized Care</p>
+      <h2 class="text-center" data-i18n="surgical.h2">Pre-Op &amp; Post-Op Massage</h2>
+      <p class="text-center" data-i18n="surgical.p">Preparing for or recovering from plastic surgery? Our specialized massage protocols are designed to optimize your results, reduce swelling, prevent fibrosis, and help you heal faster — safely and gently.</p>
+    </div>
+  </div>
 
-      <div class="pricing-grid">
+  <!-- ===================== SURGICAL SERVICES ===================== -->
+  <section class="section services-section" style="padding-top:4rem;">
+    <div class="container">
 
-        <div class="pricing-card">
-          <h3>Single Session</h3>
-          <div class="price-wrap">
-            <span class="price-dollar">$</span>
-            <span class="price-num">XX</span>
-          </div>
-          <p class="price-note">per session</p>
-          <ul class="price-features">
-            <li>60-minute treatment</li>
-            <li>1 wood tool technique</li>
-            <li>Body consultation</li>
-            <li>Post-care guidance</li>
+      <!-- Treatment 6 — Pre-Op Prep -->
+      <div class="tool-card surgical">
+        <div class="tool-info">
+          <div class="tool-number">06</div>
+          <h3 data-i18n="t6.h3">Pre-Op Preparation Massage</h3>
+          <p class="tool-subtitle" data-i18n="t6.sub">Before Your Surgery</p>
+          <p class="tool-desc" data-i18n="t6.desc">A lymphatic preparation massage performed 1–2 weeks before your scheduled surgery. This gentle treatment activates your lymphatic system, reduces baseline inflammation, improves skin elasticity, and primes your body for a faster, smoother recovery. Many surgeons recommend it before tummy tucks, BBL, liposuction, and breast procedures.</p>
+          <ul class="benefits">
+            <li data-i18n="t6.b1">Activates lymphatic flow before surgery</li>
+            <li data-i18n="t6.b2">Reduces baseline inflammation</li>
+            <li data-i18n="t6.b3">Improves skin elasticity &amp; healing capacity</li>
+            <li data-i18n="t6.b4">Recommended 1–2 sessions pre-surgery</li>
           </ul>
-          <a href="#booking" class="btn btn-outline">Book Now</a>
+        </div>
+        <div class="tool-ba">
+          <div class="ba-wrap" data-ba="6">
+            <div class="ba-after">
+              <div class="placeholder-img after-ph after-green">
+                <div class="ph-inner"><span>AFTER — Add Photo</span></div>
+              </div>
+            </div>
+            <div class="ba-before">
+              <div class="placeholder-img before-ph">
+                <div class="ph-inner"><span>BEFORE — Add Photo</span></div>
+              </div>
+            </div>
+            <div class="ba-handle">
+              <div class="ba-line"></div>
+              <div class="ba-circle">
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#4A4540" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Treatment 7 — Tummy Tuck Recovery -->
+      <div class="tool-card tool-card-flip surgical">
+        <div class="tool-info">
+          <div class="tool-number">07</div>
+          <h3 data-i18n="t7.h3">Tummy Tuck Aftercare</h3>
+          <p class="tool-subtitle" data-i18n="t7.sub">Abdominoplasty Recovery Massage</p>
+          <p class="tool-desc" data-i18n="t7.desc">A specialized post-abdominoplasty massage protocol to accelerate healing after your tummy tuck. We use ultra-gentle lymphatic drainage to reduce swelling, seroma risk, and bruising, followed by soft tissue work to prevent fibrosis, smooth lumps, and help your skin adhere beautifully to your new contour.</p>
+          <ul class="benefits">
+            <li data-i18n="t7.b1">Reduces post-surgical swelling &amp; seroma</li>
+            <li data-i18n="t7.b2">Prevents and treats fibrosis</li>
+            <li data-i18n="t7.b3">Smooths skin to new abdominal contour</li>
+            <li data-i18n="t7.b4">Safe from week 1 post-op (with surgeon approval)</li>
+          </ul>
+        </div>
+        <div class="tool-ba">
+          <div class="ba-wrap" data-ba="7">
+            <div class="ba-after">
+              <div class="placeholder-img after-ph after-green">
+                <div class="ph-inner"><span>AFTER — Add Photo</span></div>
+              </div>
+            </div>
+            <div class="ba-before">
+              <div class="placeholder-img before-ph">
+                <div class="ph-inner"><span>BEFORE — Add Photo</span></div>
+              </div>
+            </div>
+            <div class="ba-handle">
+              <div class="ba-line"></div>
+              <div class="ba-circle">
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#4A4540" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Treatment 8 — Breast Surgery Recovery -->
+      <div class="tool-card surgical">
+        <div class="tool-info">
+          <div class="tool-number">08</div>
+          <h3 data-i18n="t8.h3">Breast Surgery Recovery</h3>
+          <p class="tool-subtitle" data-i18n="t8.sub">Post-Op Breast Massage</p>
+          <p class="tool-desc" data-i18n="t8.desc">Gentle post-operative massage for breast augmentation, breast reduction, breast lift, and implant revision. This specialized technique reduces firmness around implants, prevents capsular contracture, drains excess fluid from the axillary lymph nodes, and restores natural movement and softness to the surrounding tissue.</p>
+          <ul class="benefits">
+            <li data-i18n="t8.b1">Softens implants &amp; reduces firmness</li>
+            <li data-i18n="t8.b2">Helps prevent capsular contracture</li>
+            <li data-i18n="t8.b3">Drains axillary lymph nodes &amp; reduces swelling</li>
+            <li data-i18n="t8.b4">Safe for augmentation, reduction &amp; lift recovery</li>
+          </ul>
+        </div>
+        <div class="tool-ba">
+          <div class="ba-wrap" data-ba="8">
+            <div class="ba-after">
+              <div class="placeholder-img after-ph after-green">
+                <div class="ph-inner"><span>AFTER — Add Photo</span></div>
+              </div>
+            </div>
+            <div class="ba-before">
+              <div class="placeholder-img before-ph">
+                <div class="ph-inner"><span>BEFORE — Add Photo</span></div>
+              </div>
+            </div>
+            <div class="ba-handle">
+              <div class="ba-line"></div>
+              <div class="ba-circle">
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#4A4540" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== AFTER CARE ===================== -->
+  <section id="care" class="care-section">
+    <div class="container">
+      <p class="eyebrow text-center" data-i18n="care.eyebrow">Maximize Your Results</p>
+      <h2 class="text-center" data-i18n="care.h2">After-Treatment Care</h2>
+      <p class="section-sub text-center" data-i18n="care.sub">Follow these simple guidelines after each session to get the best results and help your body heal and sculpt faster.</p>
+
+      <div class="care-grid">
+
+        <div class="care-card">
+          <div class="care-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3 data-i18n="care1.h3">Drink Plenty of Water</h3>
+          <p data-i18n="care1.p">Drink at least 8–10 glasses of water after every session. Hydration is essential for flushing the toxins and fat your body releases during treatment. Herbal teas and coconut water also count — avoid alcohol for 24 hours.</p>
         </div>
 
-        <div class="pricing-card pricing-featured">
-          <div class="pricing-badge">Most Popular</div>
-          <h3>Package of 5</h3>
-          <div class="price-wrap">
-            <span class="price-dollar">$</span>
-            <span class="price-num">XXX</span>
+        <div class="care-card">
+          <div class="care-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4-4-1.79-4-4z"/></svg>
           </div>
-          <p class="price-note">5 sessions · save XX%</p>
-          <ul class="price-features">
-            <li>5 × 75-min treatments</li>
-            <li>Full tool combination</li>
-            <li>Progress photo tracking</li>
-            <li>Faja fitting included</li>
-            <li>Priority scheduling</li>
-          </ul>
-          <a href="#booking" class="btn btn-primary">Book Now</a>
+          <h3 data-i18n="care2.h3">Wear Your Faja or Waist Trainer</h3>
+          <p data-i18n="care2.p">Put on your faja or waist trainer immediately after each session and wear it consistently — ideally 6–8 hours per day. Compression holds the tissue in its new shape, accelerates lymphatic flow, and dramatically improves your sculpting results.</p>
         </div>
 
-        <div class="pricing-card">
-          <h3>Package of 10</h3>
-          <div class="price-wrap">
-            <span class="price-dollar">$</span>
-            <span class="price-num">XXX</span>
+        <div class="care-card">
+          <div class="care-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
-          <p class="price-note">10 sessions · save XX%</p>
-          <ul class="price-features">
-            <li>10 × 75-min treatments</li>
-            <li>Full tool combination</li>
-            <li>Before &amp; after photos</li>
-            <li>Faja colombiana included</li>
-            <li>Priority scheduling</li>
-          </ul>
-          <a href="#booking" class="btn btn-outline">Book Now</a>
-        </div>
-
-        <div class="pricing-card">
-          <h3>Post-Surgery</h3>
-          <div class="price-wrap">
-            <span class="price-dollar">$</span>
-            <span class="price-num">XXX</span>
-          </div>
-          <p class="price-note">custom package</p>
-          <ul class="price-features">
-            <li>Post-lipo / BBL recovery</li>
-            <li>Fibrosis treatment</li>
-            <li>Tabla reductora focus</li>
-            <li>Customized schedule</li>
-            <li>MD clearance required</li>
-          </ul>
-          <a href="#booking" class="btn btn-outline">Book Now</a>
+          <h3 data-i18n="care3.h3">Stay Consistent</h3>
+          <p data-i18n="care3.p">Results build session by session. Avoid heavy meals, excess sodium, and alcohol for the first 24 hours after treatment. Light walking or gentle movement helps stimulate lymphatic drainage. The more consistent you are, the more dramatic your transformation.</p>
         </div>
 
       </div>
-      <p class="pricing-disclaimer">* Replace the XX placeholders above with your real prices.</p>
+
+      <div class="care-disclaimer">
+        <p><strong>Results Disclaimer:</strong> Individual results may vary. The number of sessions needed depends on your body type, lifestyle, and goals. Results are enhanced by proper hydration, consistent use of compression garments, and following all post-treatment guidance. Our treatments are not a substitute for medical care.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== SHOP — SPA PRODUCTS ===================== -->
+  <section id="shop" class="section shop-section">
+    <div class="container">
+      <p class="eyebrow text-center" data-i18n="shop.eyebrow">Available at Our Spa</p>
+      <h2 class="text-center" data-i18n="shop.h2">Fajas &amp; Body Shapers</h2>
+      <p class="section-sub text-center" data-i18n="shop.sub">We carry a curated selection of authentic Colombian fajas and waist trainers in-spa — the perfect complement to your sculpting sessions for faster, longer-lasting results.</p>
+
+      <div class="shop-grid">
+
+        <!-- Product 1 -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <div class="shop-img-ph">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span data-i18n="shop.addphoto">Add Product Photo</span>
+            </div>
+            <div class="shop-badge-wrap">
+              <span class="shop-badge new" data-i18n="shop.badge.new">New</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s1.cat">Post-Surgery</span>
+            <h3 class="shop-name">Faja Post-Cirugía BBL</h3>
+            <p class="shop-desc" data-i18n="s1.desc">Specially designed for BBL &amp; lipo recovery. Maximum compression with open-bust design and adjustable straps. Available in-spa.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+            </div>
+            <div class="shop-price-row">
+              <div>
+                <span class="shop-price"><span>$</span>89</span>
+              </div>
+              <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Faja%20Post-Cirugia%20BBL" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <div class="shop-img-ph">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span data-i18n="shop.addphoto">Add Product Photo</span>
+            </div>
+            <div class="shop-badge-wrap">
+              <span class="shop-badge hot" data-i18n="shop.badge.hot">Best Seller</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s2.cat">Daily Wear</span>
+            <h3 class="shop-name">Faja Reductora Body</h3>
+            <p class="shop-desc" data-i18n="s2.desc">Full-body slimming shaper for everyday use. Flattens tummy, lifts glutes, and smooths love handles. Ask about sizing at your appointment.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+            </div>
+            <div class="shop-price-row">
+              <div>
+                <span class="shop-price"><span>$</span>75</span>
+              </div>
+              <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Faja%20Reductora%20Body" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <div class="shop-img-ph">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span data-i18n="shop.addphoto">Add Product Photo</span>
+            </div>
+            <div class="shop-badge-wrap">
+              <span class="shop-badge sale" data-i18n="shop.badge.sale15">Save 15%</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s3.cat">Waist Trainer</span>
+            <h3 class="shop-name">Cinturilla Reductora</h3>
+            <p class="shop-desc" data-i18n="s3.desc">Latex waist trainer for maximum sweat and compression. Pair with your sculpting sessions for faster, more visible results.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span>
+            </div>
+            <div class="shop-price-row">
+              <div>
+                <span class="shop-price"><span>$</span>55</span>
+                <span class="shop-old-price">$65</span>
+              </div>
+              <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Cinturilla%20Reductora" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <div class="shop-img-ph">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span data-i18n="shop.addphoto">Add Product Photo</span>
+            </div>
+            <div class="shop-badge-wrap">
+              <span class="shop-badge new" data-i18n="shop.badge.new">New</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s4.cat">Post-Surgery</span>
+            <h3 class="shop-name">Faja Post-Lipo Abdominal</h3>
+            <p class="shop-desc" data-i18n="s4.desc">High-compression abdominal binder for post-liposuction recovery. Reduces swelling and prevents fibrosis. Available in-spa by appointment.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+            </div>
+            <div class="shop-price-row">
+              <div>
+                <span class="shop-price"><span>$</span>95</span>
+              </div>
+              <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Faja%20Post-Lipo%20Abdominal" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <div class="shop-img-ph">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span data-i18n="shop.addphoto">Add Product Photo</span>
+            </div>
+            <div class="shop-badge-wrap">
+              <span class="shop-badge hot" data-i18n="shop.badge.hot">Best Seller</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s5.cat">Body Shaper</span>
+            <h3 class="shop-name">Body Entero Levanta Cola</h3>
+            <p class="shop-desc" data-i18n="s5.desc">Full-body shaper with butt-lifting design. Seamless under clothing, perfect for daily use. Visit us to find your perfect fit.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span>
+            </div>
+            <div class="shop-price-row">
+              <div>
+                <span class="shop-price"><span>$</span>85</span>
+              </div>
+              <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Body%20Entero%20Levanta%20Cola" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <div class="shop-img-ph">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span data-i18n="shop.addphoto">Add Product Photo</span>
+            </div>
+            <div class="shop-badge-wrap">
+              <span class="shop-badge sale" data-i18n="shop.badge.sale10">Save 10%</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s6.cat">Shapewear</span>
+            <h3 class="shop-name">Short Bermuda Reductora</h3>
+            <p class="shop-desc" data-i18n="s6.desc">High-waisted compression shorts for thighs and glutes. Ideal for wearing during maderotherapy for enhanced sculpting results.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+            </div>
+            <div class="shop-price-row">
+              <div>
+                <span class="shop-price"><span>$</span>49</span>
+                <span class="shop-old-price">$55</span>
+              </div>
+              <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Short%20Bermuda%20Reductora" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end shop-grid -->
+
+      <!-- CTA strip -->
+      <div class="shop-cta-strip">
+        <div>
+          <h3 data-i18n-html="shop.cta.h3">Not sure which <em>faja is right</em> for you?</h3>
+          <p data-i18n="shop.cta.p">Message us on WhatsApp — we'll recommend the perfect style and size for your body, goals, and treatment plan.</p>
+        </div>
+        <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20Tania!%20I%20need%20help%20choosing%20the%20right%20faja%20for%20me." class="btn btn-gold" target="_blank" data-i18n="shop.cta.btn">Chat with Us</a>
+      </div>
+
     </div>
   </section>
 
   <!-- ===================== BOOKING ===================== -->
   <section id="booking" class="section booking-section">
     <div class="container">
-      <p class="eyebrow text-center">Ready to Transform?</p>
-      <h2 class="text-center">Book Your Appointment</h2>
-      <p class="section-sub text-center">Pick your date and time below. You will automatically receive a confirmation and reminder by email or text.</p>
+      <p class="eyebrow text-center" data-i18n="booking.eyebrow">Ready to Transform?</p>
+      <h2 class="text-center" data-i18n="booking.h2">Request Your Appointment</h2>
+      <p class="section-sub text-center" data-i18n-html="booking.sub">Send us a message and we will respond within <strong>24 hours</strong> to confirm your appointment date and time.</p>
 
-      <div class="booking-reminder-badges">
-        <div class="reminder-badge">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          Email Reminder Sent
-        </div>
-        <div class="reminder-badge">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          SMS Reminder Sent
-        </div>
-        <div class="reminder-badge">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Free Cancellation
-        </div>
-      </div>
+      <div class="booking-contact-block">
 
-      <!-- ── PASTE YOUR CALENDLY OR SQUARE BOOKING EMBED CODE HERE ── -->
-      <div class="booking-embed-area">
-        <div class="booking-placeholder">
-          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#e8a0b5" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <h3>Your Booking Widget Goes Here</h3>
-          <p>Paste your <strong>Calendly</strong> or <strong>Square Appointments</strong> embed code in <code>index.html</code> inside the <code>.booking-embed-area</code> div, replacing this placeholder block.</p>
-          <div class="embed-hint">
-            <strong>Calendly example:</strong><br>
-            <code>&lt;div class="calendly-inline-widget" data-url="https://calendly.com/YOUR-LINK" style="min-width:320px;height:700px;"&gt;&lt;/div&gt;<br>&lt;script src="https://assets.calendly.com/assets/external/widget.js"&gt;&lt;/script&gt;</code>
+        <div class="booking-badges">
+          <div class="booking-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.48 2 2 0 0 1 3.58 2.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.82a16 16 0 0 0 6.29 6.29l1.84-1.84a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span data-i18n="booking.badge1">We Reply Within 24 Hours</span>
           </div>
-          <a href="#contact" class="btn btn-primary" style="margin-top:1.8rem">Contact Us to Book</a>
+          <div class="booking-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span data-i18n="booking.badge2">24-Hour Appointment Reminder</span>
+          </div>
+          <div class="booking-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="booking.badge3">Free Consultation Included</span>
+          </div>
         </div>
-      </div>
-      <!-- ── END BOOKING EMBED ── -->
 
+        <div class="booking-response-card">
+          <div class="bi">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </div>
+          <h3 data-i18n="booking.card.h3">Message Us to Book</h3>
+          <p data-i18n="booking.card.p">Ready to begin your transformation? Send us a WhatsApp or text message with your name, preferred dates, and which treatment you're interested in. We respond within 24 hours to confirm your spot.</p>
+
+          <div class="deposit-note">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <p data-i18n-html="booking.deposit"><strong>$10 Consultation Deposit Required</strong> — A small $10 deposit is collected to reserve your first appointment slot and consultation. This ensures your time is held just for you and goes toward your session balance. We'll send you payment instructions when we confirm your booking.</p>
+          </div>
+
+          <div class="booking-cta-row">
+            <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20Tania!%20I%27d%20like%20to%20book%20an%20appointment%20at%20Tania%20Ayala%20Body%20Sculpting." class="btn btn-primary" target="_blank" data-i18n="booking.wa.btn">
+              Message on WhatsApp
+            </a>
+            <a href="#contact" class="btn btn-outline" data-i18n="booking.contact.btn">See Contact Info</a>
+          </div>
+        </div>
+
+
+      </div>
     </div>
   </section>
 
   <!-- ===================== TESTIMONIALS ===================== -->
   <section id="testimonials" class="section testimonials-section">
     <div class="container">
-      <p class="eyebrow text-center">Client Love</p>
-      <h2 class="text-center">What Our Clients Say</h2>
+      <p class="eyebrow text-center" data-i18n="reviews.eyebrow">Client Love</p>
+      <h2 class="text-center" data-i18n="reviews.h2">What Our Clients Say</h2>
 
       <div class="carousel-wrap">
         <div class="carousel-track" id="carouselTrack">
 
           <div class="t-card">
             <div class="stars">★★★★★</div>
-            <p>"After just 5 sessions with Tania I noticed a huge difference in my waist and hips. The wood sculpting is intense but so worth it — my skin feels so much firmer and my waist is 3 inches smaller!"</p>
+            <p>"After just 5 sessions my waist is 3 inches smaller and my skin feels so much firmer. The wood sculpting is intense but so worth it — I am genuinely amazed by the results. Tania knows exactly what she's doing!"</p>
             <div class="t-author">
               <div class="t-avatar">M</div>
               <div>
                 <strong>Maria G.</strong>
-                <span>5 sessions · Raqueta &amp; Rodillo</span>
+                <span>5 sessions · Wood Sculpting &amp; Lymphatic</span>
               </div>
             </div>
           </div>
 
           <div class="t-card">
             <div class="stars">★★★★★</div>
-            <p>"I was so nervous after my BBL but Tania's post-surgery package helped me recover so fast. Zero fibrosis at all! She truly knows what she's doing. I will never go anywhere else."</p>
+            <p>"I was so nervous after my BBL but Tania's post-surgery lymphatic sessions helped me recover so fast. Zero fibrosis at all! She truly knows what she's doing. I will never go anywhere else for this."</p>
             <div class="t-author">
               <div class="t-avatar">S</div>
               <div>
                 <strong>Sofia R.</strong>
-                <span>Post-Surgery Package</span>
+                <span>Post-Surgery Recovery Package</span>
               </div>
             </div>
           </div>
@@ -457,31 +831,31 @@
               <div class="t-avatar">L</div>
               <div>
                 <strong>Lucia M.</strong>
-                <span>Package of 10</span>
+                <span>Package of 10 Sessions</span>
               </div>
             </div>
           </div>
 
           <div class="t-card">
             <div class="stars">★★★★★</div>
-            <p>"The faja Tania recommended after my treatment makes such a huge difference. She is so knowledgeable, caring, and her space is clean and cozy. Every penny is worth it. Highly recommend!"</p>
+            <p>"The faja Tania recommended after my treatment makes such a huge difference. She is so knowledgeable, caring, and her space is clean and so relaxing. Every penny is worth it. Highly recommend!"</p>
             <div class="t-author">
               <div class="t-avatar">C</div>
               <div>
                 <strong>Carmen V.</strong>
-                <span>Single Session + Faja</span>
+                <span>Single Session + Faja Fitting</span>
               </div>
             </div>
           </div>
 
           <div class="t-card">
             <div class="stars">★★★★★</div>
-            <p>"Tania is amazing! I lost 2 dress sizes just from her sculpting sessions and faja guidance. She explains everything and makes you feel so comfortable. Best investment I've made in myself!"</p>
+            <p>"Tania is amazing! The lymphatic drainage alone changed how my body feels — less bloated, lighter, more energy. Combined with wood sculpting I lost 2 dress sizes. Best investment I've made in myself!"</p>
             <div class="t-author">
               <div class="t-avatar">A</div>
               <div>
                 <strong>Andrea P.</strong>
-                <span>Package of 5</span>
+                <span>Sculpting Package of 5</span>
               </div>
             </div>
           </div>
@@ -500,8 +874,8 @@
   <!-- ===================== CONTACT ===================== -->
   <section id="contact" class="section contact-section">
     <div class="container">
-      <p class="eyebrow text-center">Find Us</p>
-      <h2 class="text-center">Contact &amp; Location</h2>
+      <p class="eyebrow text-center" data-i18n="contact.eyebrow">Find Us</p>
+      <h2 class="text-center" data-i18n="contact.h2">Contact &amp; Location</h2>
 
       <div class="contact-grid">
         <div class="contact-info">
@@ -511,8 +885,9 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <strong>Address</strong>
-              <p>[Your Street Address]<br>[City, State, ZIP]</p>
+              <strong data-i18n="contact.addr.label">Address</strong>
+              <p>1229 3rd Ave Ste E<br>Chula Vista, CA 91911</p>
+              <a href="https://maps.google.com/?q=1229+3rd+Ave+Ste+E+Chula+Vista+CA+91911" target="_blank" rel="noopener" class="directions-link">Get Directions →</a>
             </div>
           </div>
 
@@ -521,8 +896,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.48 2 2 0 0 1 3.58 2.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.82a16 16 0 0 0 6.29 6.29l1.84-1.84a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div>
-              <strong>Phone &amp; WhatsApp</strong>
-              <p><a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></p>
+              <strong data-i18n="contact.phone.label">Phone &amp; WhatsApp</strong>
+              <p><a href="tel:+16194511398">(619) 451-1398</a></p>
             </div>
           </div>
 
@@ -531,8 +906,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div>
-              <strong>Email</strong>
-              <p><a href="mailto:info@taniaayala.com">info@taniaayala.com</a></p>
+              <strong data-i18n="contact.email.label">Email</strong>
+              <p><a href="mailto:info@taniaayalasculpting.com">info@taniaayalasculpting.com</a></p>
             </div>
           </div>
 
@@ -541,19 +916,19 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <div>
-              <strong>Hours</strong>
-              <p>Mon – Fri: 9:00 AM – 7:00 PM<br>Saturday: 9:00 AM – 5:00 PM<br>Sunday: By appointment only</p>
+              <strong data-i18n="contact.hours.label">Hours</strong>
+              <p data-i18n-html="contact.hours.text">Mon – Fri: 9:00 AM – 6:00 PM<br>Saturday: Closed<br>Sunday: Closed</p>
             </div>
           </div>
 
           <div class="social-row">
-            <a href="#" class="social-link ig">
+            <a href="https://www.instagram.com/taniaayala_sculpt" target="_blank" rel="noopener" class="social-link ig">
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              Instagram
+              @taniaayala_sculpt
             </a>
-            <a href="#" class="social-link fb">
+            <a href="https://www.facebook.com/search/top?q=Tania+Ayala+Fajas+Colombianas" target="_blank" rel="noopener" class="social-link fb">
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              Facebook
+              Tania Ayala Fajas Colombianas
             </a>
             <a href="#" class="social-link wa">
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -564,14 +939,12 @@
         </div>
 
         <div class="map-wrap">
-          <!-- REPLACE THIS DIV WITH YOUR GOOGLE MAPS EMBED -->
-          <!-- Go to Google Maps → your location → Share → Embed a map → Copy HTML -->
-          <div class="map-placeholder">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#e8a0b5" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <strong>Add Google Maps Here</strong>
-            <p>Go to Google Maps → your business → Share → Embed a map → copy the &lt;iframe&gt; code and paste it here.</p>
-          </div>
-          <!-- END MAP EMBED -->
+          <iframe
+            src="https://maps.google.com/maps?q=32.6094394,-117.0669919&z=17&output=embed"
+            width="100%" height="100%" style="border:0; min-height:420px;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Tania Ayala Fajas Colombianas — 1229 3rd Ave Ste E, Chula Vista, CA">
+          </iframe>
         </div>
 
       </div>
@@ -584,41 +957,59 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="logo-main">Tania Ayala</span>
-          <span class="logo-sub">Fajas Colombianas</span>
-          <p>Expert wood body sculpting &amp; maderotherapy. Natural, non-surgical body contouring for real, lasting results.</p>
+          <span class="logo-sub">Body Sculpting</span>
+          <p data-i18n="footer.desc">Gluteal sculpting, body molding, BBL recovery, Brazilian &amp; European lymphatic detox, anti-cellulite &amp; post-op care.</p>
         </div>
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer.links">Quick Links</h4>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#booking">Book Now</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#care" data-i18n="nav.care">After Care</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="#shop" data-i18n="nav.shop">Spa Shop</a></li>
+            <li><a href="#booking" data-i18n="nav.book">Book Now</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4 data-i18n="footer.services">Our Services</h4>
           <ul>
-            <li>Maderotherapy</li>
-            <li>Lymphatic Drainage</li>
-            <li>Body Sculpting</li>
-            <li>Post-Surgery Recovery</li>
-            <li>Fajas Colombianas</li>
+            <li data-i18n="footer.s1">Lymphatic Drainage Massage</li>
+            <li data-i18n="footer.s2">Wood Body Sculpting</li>
+            <li data-i18n="footer.s3">Wood Cupping Therapy</li>
+            <li data-i18n="footer.s4">Deep Spot Sculpting</li>
+            <li data-i18n="footer.s5">Pre-Op Preparation</li>
+            <li data-i18n="footer.s6">Tummy Tuck Aftercare</li>
+            <li data-i18n="footer.s7">Breast Surgery Recovery</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Tania Ayala Fajas Colombianas. All rights reserved.</p>
+        <p data-i18n="footer.copy">&copy; 2026 Tania Ayala Body Sculpting. All rights reserved.</p>
+        <p class="footer-music-credit">
+          ♪ Ambient music by <a href="https://pixabay.com/users/mickeyscat-35308165/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=554494" target="_blank" rel="noopener">MickeysCat</a> via <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=554494" target="_blank" rel="noopener">Pixabay</a>
+        </p>
       </div>
     </div>
   </footer>
+
+  <!-- Floating Music Player -->
+  <button class="music-float" id="musicBtn" aria-label="Toggle relaxing music" onclick="toggleMusic()">
+    <span class="music-tooltip">Relaxing Music</span>
+    <svg id="musicIconPlay" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+    <svg id="musicIconPause" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+  </button>
+  <audio id="bgMusic" loop preload="none">
+    <source src="ambient.mp3" type="audio/mpeg">
+    <source src="ambient.ogg" type="audio/ogg">
+  </audio>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/1XXXXXXXXXX" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=15"></script>
 </body>
 </html>
