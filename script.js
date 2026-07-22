@@ -90,8 +90,8 @@ const translations = {
     't2.b4':  'Stimulates collagen production',
 
     /* ── Treatment 3 ── */
-    't3.h3':  'Wood Cupping Therapy',
-    't3.sub': 'Ventosas de Madera',
+    't3.h3':  'Manual Belly Sculpting',
+    't3.sub': 'Hand Sculpting Massage',
     't3.desc':'Tania\'s trained hands become the ultimate sculpting tool — kneading, lifting, and contouring every inch of your belly with a precision no machine can replicate. Manual belly sculpting breaks up stubborn fat, releases deep fascial tension stored in your gut, flattens your midsection, and redefines your waistline through intentional expert touch. You\'ll feel lighter after session one. You\'ll see the shape change after session three.',
     't3.b1':  'Sculpts & defines the waist by hand',
     't3.b2':  'Breaks up stubborn belly fat manually',
@@ -232,7 +232,7 @@ const translations = {
     'footer.copy':     '© 2026 Tania Ayala Body Sculpting. All rights reserved.',
     'footer.s1': 'Lymphatic Drainage Massage',
     'footer.s2': 'Wood Body Sculpting',
-    'footer.s3': 'Wood Cupping Therapy',
+    'footer.s3': 'Manual Belly Sculpting',
     'footer.s4': 'Deep Spot Sculpting',
     'footer.s5': 'Pre-Op Preparation',
     'footer.s6': 'Tummy Tuck Aftercare',
@@ -319,8 +319,8 @@ const translations = {
     't2.b4':  'Estimula la producción de colágeno',
 
     /* ── Treatment 3 ── */
-    't3.h3':  'Terapia de Ventosas de Madera',
-    't3.sub': 'Ventosas de Madera',
+    't3.h3':  'Escultura Abdominal Manual',
+    't3.sub': 'Masaje Escultor a Mano',
     't3.desc':'Las manos entrenadas de Tania se convierten en la herramienta de escultura definitiva — amasando, levantando y contorneando cada centímetro de tu vientre con una precisión que ninguna máquina puede igualar. La escultura manual abdominal desintegra la grasa rebelde, libera la tensión profunda de la fascia acumulada en tu intestino, aplana el abdomen y redefine tu cintura con un toque experto e intencional. Lo sentirás desde la primera sesión. Lo verás desde la tercera.',
     't3.b1':  'Esculpe y define la cintura a mano',
     't3.b2':  'Desintegra la grasa abdominal manualmente',
@@ -461,7 +461,7 @@ const translations = {
     'footer.copy':     '© 2026 Tania Ayala Body Sculpting. Todos los derechos reservados.',
     'footer.s1': 'Masaje de Drenaje Linfático',
     'footer.s2': 'Escultura Corporal con Madera',
-    'footer.s3': 'Terapia de Ventosas de Madera',
+    'footer.s3': 'Escultura Abdominal Manual',
     'footer.s4': 'Escultura Puntual Profunda',
     'footer.s5': 'Preparación Pre-Op',
     'footer.s6': 'Cuidados Post-Abdominoplastia',
