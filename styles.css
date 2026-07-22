@@ -538,13 +538,15 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
-.tool-video-wrap iframe {
+.tool-video-wrap iframe,
+.tool-video-wrap video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: none;
   display: block;
+  object-fit: cover;
 }
 
 /* ---- Before / After Slider ---- */
