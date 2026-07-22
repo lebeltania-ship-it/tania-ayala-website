@@ -92,11 +92,11 @@ const translations = {
     /* ── Treatment 3 ── */
     't3.h3':  'Wood Cupping Therapy',
     't3.sub': 'Ventosas de Madera',
-    't3.desc':'Wooden vacuum cups create gentle negative pressure that lifts the skin and underlying tissue — drawing out toxins, breaking adhesions, and increasing oxygen-rich blood flow to the area. The result is firmer, more elastic skin with improved tone and reduced stretch marks.',
-    't3.b1':  'Lifts and firms sagging skin',
-    't3.b2':  'Breaks down scar tissue &amp; adhesions',
-    't3.b3':  'Fades stretch marks over time',
-    't3.b4':  'Detoxifying &amp; deeply restorative',
+    't3.desc':'That signature suction sound you hear? That\'s your belly fat breaking up in real time. Wooden cups glide across your abdomen creating rhythmic negative pressure that reaches deep into belly tissue — flattening, firming, and sculpting your midsection while flushing toxins and activating circulation you can actually feel.',
+    't3.b1':  'Flattens & tones the belly',
+    't3.b2':  'Breaks up stubborn abdominal fat',
+    't3.b3':  'Reduces bloating & tightens loose skin',
+    't3.b4':  'Boosts circulation & lymphatic flow',
 
     /* ── Treatment 4 ── */
     't4.h3':  'Post-Surgery Contouring',
@@ -321,11 +321,11 @@ const translations = {
     /* ── Treatment 3 ── */
     't3.h3':  'Terapia de Ventosas de Madera',
     't3.sub': 'Ventosas de Madera',
-    't3.desc':'Las ventosas de madera crean una suave presión negativa que levanta la piel y el tejido subyacente — extrayendo toxinas, rompiendo adherencias y aumentando el flujo sanguíneo rico en oxígeno hacia la zona. El resultado es una piel más firme y elástica con mejor tono y estrías reducidas.',
-    't3.b1':  'Levanta y firma la piel caída',
-    't3.b2':  'Desintegra tejido cicatricial y adherencias',
-    't3.b3':  'Reduce las estrías con el tiempo',
-    't3.b4':  'Desintoxicante y profundamente restaurador',
+    't3.desc':'¿Escuchas ese característico sonido de succión? Así es como la grasa de tu abdomen se rompe en tiempo real. Las ventosas de madera se deslizan por tu vientre creando presión negativa rítmica que llega profundo al tejido abdominal — aplanando, firmando y esculpiendo tu cintura mientras elimina toxinas y activa una circulación que realmente puedes sentir.',
+    't3.b1':  'Aplana y tonifica el vientre',
+    't3.b2':  'Desintegra la grasa abdominal rebelde',
+    't3.b3':  'Reduce hinchazón y tensa la piel flácida',
+    't3.b4':  'Activa la circulación y el flujo linfático',
 
     /* ── Treatment 4 ── */
     't4.h3':  'Contorno Post-Cirugía',
