@@ -92,11 +92,11 @@ const translations = {
     /* ── Treatment 3 ── */
     't3.h3':  'Wood Cupping Therapy',
     't3.sub': 'Ventosas de Madera',
-    't3.desc':'That signature suction sound you hear? That\'s your belly fat breaking up in real time. Wooden cups glide across your abdomen creating rhythmic negative pressure that reaches deep into belly tissue — flattening, firming, and sculpting your midsection while flushing toxins and activating circulation you can actually feel.',
-    't3.b1':  'Flattens & tones the belly',
-    't3.b2':  'Breaks up stubborn abdominal fat',
-    't3.b3':  'Reduces bloating & tightens loose skin',
-    't3.b4':  'Boosts circulation & lymphatic flow',
+    't3.desc':'Tania\'s trained hands become the ultimate sculpting tool — kneading, lifting, and contouring every inch of your belly with a precision no machine can replicate. Manual belly sculpting breaks up stubborn fat, releases deep fascial tension stored in your gut, flattens your midsection, and redefines your waistline through intentional expert touch. You\'ll feel lighter after session one. You\'ll see the shape change after session three.',
+    't3.b1':  'Sculpts & defines the waist by hand',
+    't3.b2':  'Breaks up stubborn belly fat manually',
+    't3.b3':  'Relieves gut bloating & digestive tension',
+    't3.b4':  'Firms skin & tightens the core',
 
     /* ── Treatment 4 ── */
     't4.h3':  'Post-Surgery Contouring',
@@ -321,11 +321,11 @@ const translations = {
     /* ── Treatment 3 ── */
     't3.h3':  'Terapia de Ventosas de Madera',
     't3.sub': 'Ventosas de Madera',
-    't3.desc':'¿Escuchas ese característico sonido de succión? Así es como la grasa de tu abdomen se rompe en tiempo real. Las ventosas de madera se deslizan por tu vientre creando presión negativa rítmica que llega profundo al tejido abdominal — aplanando, firmando y esculpiendo tu cintura mientras elimina toxinas y activa una circulación que realmente puedes sentir.',
-    't3.b1':  'Aplana y tonifica el vientre',
-    't3.b2':  'Desintegra la grasa abdominal rebelde',
-    't3.b3':  'Reduce hinchazón y tensa la piel flácida',
-    't3.b4':  'Activa la circulación y el flujo linfático',
+    't3.desc':'Las manos entrenadas de Tania se convierten en la herramienta de escultura definitiva — amasando, levantando y contorneando cada centímetro de tu vientre con una precisión que ninguna máquina puede igualar. La escultura manual abdominal desintegra la grasa rebelde, libera la tensión profunda de la fascia acumulada en tu intestino, aplana el abdomen y redefine tu cintura con un toque experto e intencional. Lo sentirás desde la primera sesión. Lo verás desde la tercera.',
+    't3.b1':  'Esculpe y define la cintura a mano',
+    't3.b2':  'Desintegra la grasa abdominal manualmente',
+    't3.b3':  'Alivia la hinchazón y la tensión digestiva',
+    't3.b4':  'Firma la piel y tonifica el core',
 
     /* ── Treatment 4 ── */
     't4.h3':  'Contorno Post-Cirugía',
