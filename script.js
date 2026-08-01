@@ -72,13 +72,13 @@ const translations = {
     'svc.sub':     'Each technique is tailored to your body and goals. Drag the slider on each photo to see real before &amp; after results.',
 
     /* ── Treatment 1 ── */
-    't1.h3':  'Lymphatic Drainage Massage',
-    't1.sub': 'Rodillo Linfático',
-    't1.desc':'A gentle yet deeply effective technique using the cylindrical lymphatic roller along the legs, thighs, and abdomen. It stimulates the lymphatic system to flush toxins, reduce fluid retention, relieve post-surgery swelling, and visibly smooth cellulite — leaving skin lighter and refreshed.',
-    't1.b1':  'Reduces inflammation &amp; fluid retention',
-    't1.b2':  'Boosts lymph flow &amp; blood circulation',
-    't1.b3':  'Smooths cellulite appearance',
-    't1.b4':  'Ideal for post-surgery recovery',
+    't1.h3':  'Reductive Body Massage',
+    't1.sub': 'Fat-Burning Slimming Treatment',
+    't1.desc':'A powerful, targeted technique that penetrates deep into fatty tissue to break down stubborn deposits, flush toxins, and visibly slim your body. Tania applies firm, rhythmic pressure to activate fat-burning circulation, melt cellulite, and sculpt your waistline, thighs, and abdomen — with visible results from the very first session.',
+    't1.b1':  'Breaks down stubborn fat deposits',
+    't1.b2':  'Reduces cellulite & firms the skin',
+    't1.b3':  'Slims & contours waist, thighs & abdomen',
+    't1.b4':  'Activates circulation & lymphatic drainage',
 
     /* ── Treatment 2 ── */
     't2.h3':  'Wood Body Sculpting',
@@ -230,7 +230,7 @@ const translations = {
     'footer.links':    'Quick Links',
     'footer.services': 'Our Services',
     'footer.copy':     '© 2026 Tania Ayala Body Sculpting. All rights reserved.',
-    'footer.s1': 'Lymphatic Drainage Massage',
+    'footer.s1': 'Reductive Body Massage',
     'footer.s2': 'Wood Body Sculpting',
     'footer.s3': 'Manual Belly Sculpting',
     'footer.s4': 'Deep Spot Sculpting',
@@ -301,13 +301,13 @@ const translations = {
     'svc.sub':     'Cada técnica es adaptada a tu cuerpo y metas. Desliza el control en cada foto para ver resultados reales de antes y después.',
 
     /* ── Treatment 1 ── */
-    't1.h3':  'Masaje de Drenaje Linfático',
-    't1.sub': 'Rodillo Linfático',
-    't1.desc':'Una técnica suave pero profundamente efectiva que usa el rodillo linfático cilíndrico a lo largo de las piernas, muslos y abdomen. Estimula el sistema linfático para eliminar toxinas, reducir la retención de líquidos, aliviar la inflamación post-cirugía y suavizar visiblemente la celulitis — dejando la piel más ligera y fresca.',
-    't1.b1':  'Reduce inflamación y retención de líquidos',
-    't1.b2':  'Activa el flujo linfático y la circulación',
-    't1.b3':  'Suaviza la apariencia de la celulitis',
-    't1.b4':  'Ideal para recuperación post-cirugía',
+    't1.h3':  'Masaje Reductivo Corporal',
+    't1.sub': 'Tratamiento Anticelulitis y Reductor',
+    't1.desc':'Una técnica potente y dirigida que penetra en el tejido adiposo para desintegrar depósitos rebeldes, eliminar toxinas y estilizar tu cuerpo visiblemente. Tania aplica una presión firme y rítmica para activar la circulación quema-grasas, disolver la celulitis y esculpir tu cintura, muslos y abdomen — con resultados visibles desde la primera sesión.',
+    't1.b1':  'Desintegra depósitos de grasa rebelde',
+    't1.b2':  'Reduce la celulitis & firma la piel',
+    't1.b3':  'Adelgaza & contornea cintura, muslos & abdomen',
+    't1.b4':  'Activa la circulación y el drenaje linfático',
 
     /* ── Treatment 2 ── */
     't2.h3':  'Escultura Corporal con Madera',
@@ -459,7 +459,7 @@ const translations = {
     'footer.links':    'Enlaces Rápidos',
     'footer.services': 'Nuestros Servicios',
     'footer.copy':     '© 2026 Tania Ayala Body Sculpting. Todos los derechos reservados.',
-    'footer.s1': 'Masaje de Drenaje Linfático',
+    'footer.s1': 'Masaje Reductivo Corporal',
     'footer.s2': 'Escultura Corporal con Madera',
     'footer.s3': 'Escultura Abdominal Manual',
     'footer.s4': 'Escultura Puntual Profunda',
