@@ -99,22 +99,22 @@ const translations = {
     't3.b4':  'Firms skin & tightens the core',
 
     /* ── Treatment 4 ── */
-    't4.h3':  'Post-Surgery Contouring',
-    't4.sub': 'Tabla Reductora',
-    't4.desc':'The flat reducing board is essential for post-surgical recovery (BBL, liposuction, tummy tuck) and general body contouring. It redistributes fat evenly, flattens the abdomen, and treats fibrosis and lumps — accelerating healing and optimizing your surgical results.',
-    't4.b1':  'Post-lipo, BBL &amp; tummy tuck recovery',
-    't4.b2':  'Flattens abdomen &amp; treats fibrosis',
-    't4.b3':  'Redistributes fat evenly',
-    't4.b4':  'Speeds up healing &amp; reduces bruising',
+    't4.h3':  'Manual Face & Neck Lift',
+    't4.sub': 'Advanced Neck Rejuvenation',
+    't4.desc':'Tania\'s expert hands manually lift, firm, and redefine your facial contours, jawline, and neck — delivering a natural facelift effect without any needles or surgery. This signature technique uses precise, targeted pressure to sculpt the face, tighten loose neck skin, and eliminate turkey neck. Results are visible from session one, with a more defined, youthful contour that builds with every session.',
+    't4.b1':  'Lifts & defines the jawline',
+    't4.b2':  'Tightens loose neck & turkey neck skin',
+    't4.b3':  'Sculpts cheekbones & facial contours',
+    't4.b4':  'Natural facelift — no needles, no surgery',
 
     /* ── Treatment 5 ── */
-    't5.h3':  'Deep Spot Sculpting',
-    't5.sub': 'Hongo de Madera',
-    't5.desc':'The mushroom-shaped wood tool delivers deep, targeted pressure on specific problem areas — flanks, inner thighs, back rolls, and arms. Perfect for precise spot contouring and breaking up deep fat pockets that resist diet and exercise alone.',
-    't5.b1':  'Deep targeted pressure therapy',
-    't5.b2':  'Sculpts flanks, back &amp; inner thighs',
-    't5.b3':  'Breaks up stubborn fat pockets',
-    't5.b4':  'Precise, customized contouring',
+    't5.h3':  'Fibrosis & Post-Op Contouring',
+    't5.sub': 'Manual Fibrosis Treatment',
+    't5.desc':'A specialized hands-on treatment designed to break down and dissolve fibrosis — the hardened, irregular tissue that develops after liposuction, tummy tuck, BBL, or C-section. Tania uses precise manual pressure and targeted hand techniques to soften lumps, smooth uneven skin, restore circulation to affected areas, and reshape your contour after surgery. Visible results in as few as 6 sessions.',
+    't5.b1':  'Breaks down post-surgical fibrosis & lumps',
+    't5.b2':  'Smooths uneven skin after lipo or tummy tuck',
+    't5.b3':  'Restores circulation & softness to hardened tissue',
+    't5.b4':  '100% by hand — no machines, no needles',
 
     /* ── Treatment 6 ── */
     't6.h3':  'Pre-Op Preparation Massage',
@@ -328,22 +328,22 @@ const translations = {
     't3.b4':  'Firma la piel y tonifica el core',
 
     /* ── Treatment 4 ── */
-    't4.h3':  'Contorno Post-Cirugía',
-    't4.sub': 'Tabla Reductora',
-    't4.desc':'La tabla reductora plana es esencial para la recuperación post-quirúrgica (BBL, liposucción, abdominoplastia) y el contorno corporal general. Redistribuye la grasa de manera uniforme, aplana el abdomen y trata la fibrosis y los nódulos — acelerando la sanación y optimizando tus resultados quirúrgicos.',
-    't4.b1':  'Recuperación post-lipo, BBL y abdominoplastia',
-    't4.b2':  'Aplana el abdomen y trata la fibrosis',
-    't4.b3':  'Redistribuye la grasa de manera uniforme',
-    't4.b4':  'Acelera la sanación y reduce moretones',
+    't4.h3':  'Lifting Facial y de Cuello Manual',
+    't4.sub': 'Rejuvenecimiento Avanzado del Cuello',
+    't4.desc':'Las expertas manos de Tania levantan, firman y redefinen los contornos del rostro, la mandíbula y el cuello de forma manual — brindando un efecto lifting natural sin agujas ni cirugía. Esta técnica exclusiva usa presión precisa y dirigida para esculpir el rostro, tensar la piel flácida del cuello y eliminar el cuello de pavo. Los resultados son visibles desde la primera sesión, con un contorno más definido y juvenil que mejora con cada sesión.',
+    't4.b1':  'Levanta y define la mandíbula',
+    't4.b2':  'Tensa la piel del cuello y elimina el cuello de pavo',
+    't4.b3':  'Esculpe los pómulos y contornos del rostro',
+    't4.b4':  'Lifting natural — sin agujas, sin cirugía',
 
     /* ── Treatment 5 ── */
-    't5.h3':  'Escultura Puntual Profunda',
-    't5.sub': 'Hongo de Madera',
-    't5.desc':'El hongo de madera aplica presión profunda y dirigida en áreas problemáticas específicas — costados, muslos internos, rollitos de la espalda y brazos. Perfecto para el contorno puntual y para desintegrar bolsas de grasa profunda que resisten la dieta y el ejercicio.',
-    't5.b1':  'Terapia de presión profunda y dirigida',
-    't5.b2':  'Esculpe costados, espalda y muslos internos',
-    't5.b3':  'Desintegra bolsas de grasa resistentes',
-    't5.b4':  'Contorno preciso y personalizado',
+    't5.h3':  'Fibrosis y Contorno Post-Op',
+    't5.sub': 'Tratamiento Manual de Fibrosis',
+    't5.desc':'Un tratamiento especializado a mano diseñado para desintegrar y disolver la fibrosis — el tejido endurecido e irregular que se desarrolla después de liposucción, abdominoplastia, BBL o cesárea. Tania usa presión manual precisa y técnicas dirigidas con las manos para suavizar nódulos, alisar la piel irregular, restaurar la circulación y redefinir tu contorno post-cirugía. Resultados visibles en tan solo 6 sesiones.',
+    't5.b1':  'Desintegra la fibrosis post-quirúrgica y nódulos',
+    't5.b2':  'Alisa la piel irregular post-lipo o abdominoplastia',
+    't5.b3':  'Restaura la circulación y suavidad del tejido endurecido',
+    't5.b4':  '100% a mano — sin máquinas, sin agujas',
 
     /* ── Treatment 6 ── */
     't6.h3':  'Masaje de Preparación Pre-Op',
