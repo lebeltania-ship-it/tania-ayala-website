@@ -386,16 +386,12 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
 .about-image-wrap { position: relative; }
 
 /* ---- Real photo container ---- */
-@keyframes tania-turn {
-  0%   { transform: perspective(1100px) rotateY(-8deg); }
-  50%  { transform: perspective(1100px) rotateY(8deg);  }
-  100% { transform: perspective(1100px) rotateY(-8deg); }
+@keyframes tania-live {
+  0%   { transform: scale(1.10) translate(-3%, 0%); }
+  50%  { transform: scale(1.14) translate(3%, -2%); }
+  100% { transform: scale(1.10) translate(-3%, 0%); }
 }
-.about-image-wrap {
-  position: relative;
-  animation: tania-turn 8s ease-in-out infinite;
-  will-change: transform;
-}
+.about-image-wrap { position: relative; }
 .about-photo-frame {
   position: relative;
   width: 100%; overflow: hidden;
@@ -407,6 +403,8 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
   width: 100%; height: 100%;
   object-fit: cover; object-position: center top;
   display: block; z-index: 1;
+  animation: tania-live 10s ease-in-out infinite;
+  will-change: transform;
 }
 .about-photo-placeholder {
   position: absolute; inset: 0;
