@@ -27,7 +27,7 @@ const translations = {
 
     /* ── Hero ── */
     'hero.eyebrow':   'Máster Body Sculptor',
-    'hero.tagline':   'Wood Body Sculpting · Manual Sculpting · Face Sculpting · Turkey Neck<br>Brazilian &amp; European Lymphatic Drainage · BBL Recovery · Anti-Cellulite',
+    'hero.tagline':   'Wood Body Sculpting · Manual Sculpting · Face Sculpting · Turkey Neck<br>Brazilian &amp; European Lymphatic Drainage · BBL Recovery · Anti-Cellulite · Fibrosis &amp; Post-Op Contouring',
     'hero.btn.book':  'Request an Appointment',
     'hero.btn.explore':'Explore Services',
 
@@ -256,7 +256,7 @@ const translations = {
 
     /* ── Hero ── */
     'hero.eyebrow':    'Máster Body Sculptor',
-    'hero.tagline':    'Escultura Corporal con Madera · Escultura Manual · Escultura Facial · Cuello de Pavo<br>Drenaje Linfático Brasileño y Europeo · Recuperación BBL · Anticelulitis',
+    'hero.tagline':    'Escultura Corporal con Madera · Escultura Manual · Escultura Facial · Cuello de Pavo<br>Drenaje Linfático Brasileño y Europeo · Recuperación BBL · Anticelulitis · Fibrosis &amp; Post-Operatorio',
     'hero.btn.book':   'Solicitar Cita',
     'hero.btn.explore':'Ver Servicios',
 

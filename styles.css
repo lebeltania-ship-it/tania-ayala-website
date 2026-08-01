@@ -386,6 +386,11 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
 .about-image-wrap { position: relative; }
 
 /* ---- Real photo container ---- */
+@keyframes tania-turn {
+  0%   { transform: perspective(900px) rotateY(-4deg) scale(1.03); }
+  50%  { transform: perspective(900px) rotateY(4deg)  scale(1.03); }
+  100% { transform: perspective(900px) rotateY(-4deg) scale(1.03); }
+}
 .about-photo-frame {
   position: relative;
   width: 100%; overflow: hidden;
@@ -397,6 +402,8 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
   width: 100%; height: 100%;
   object-fit: cover; object-position: center top;
   display: block; z-index: 1;
+  animation: tania-turn 8s ease-in-out infinite;
+  will-change: transform;
 }
 .about-photo-placeholder {
   position: absolute; inset: 0;
