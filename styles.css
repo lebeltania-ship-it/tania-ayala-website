@@ -615,6 +615,23 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
   background-repeat: no-repeat;
 }
 
+/* Vertical before/after slider (Before on top, After on bottom) */
+.ba-wrap.ba-vertical { cursor: row-resize; touch-action: pan-x; }
+.ba-wrap.ba-vertical .ba-before { clip-path: inset(0 0 50% 0); }
+.ba-split-v { background-size: 100% 200%; background-repeat: no-repeat; }
+.ba-wrap.ba-vertical .ba-handle {
+  left: 0; right: 0; top: 50%; bottom: auto;
+  transform: translateY(-50%);
+  width: 100%; height: 48px;
+  cursor: row-resize;
+}
+.ba-wrap.ba-vertical .ba-handle .ba-line {
+  top: 50%; bottom: auto; left: 0; right: 0; width: 100%; height: 2px;
+  transform: translateY(-50%);
+}
+.ba-wrap.ba-vertical .ba-tag-l { top: 14px; bottom: auto; left: 14px; right: auto; }
+.ba-wrap.ba-vertical .ba-tag-r { bottom: 14px; left: 14px; right: auto; }
+
 /* ============================================================
    SURGICAL CARE DIVIDER BANNER
    ============================================================ */

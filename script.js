@@ -117,13 +117,13 @@ const translations = {
     't5.b4':  '100% by hand — no machines, no needles',
 
     /* ── Treatment 6 ── */
-    't6.h3':  'Pre-Op Preparation Massage',
-    't6.sub': 'Before Your Surgery',
-    't6.desc':'A lymphatic preparation massage performed 1–2 weeks before your scheduled surgery. This gentle treatment activates your lymphatic system, reduces baseline inflammation, improves skin elasticity, and primes your body for a faster, smoother recovery. Many surgeons recommend it before tummy tucks, BBL, liposuction, and breast procedures.',
-    't6.b1':  'Activates lymphatic flow before surgery',
-    't6.b2':  'Reduces baseline inflammation',
-    't6.b3':  'Improves skin elasticity &amp; healing capacity',
-    't6.b4':  'Recommended 1–2 sessions pre-surgery',
+    't6.h3':  'Post-Op Hand Massage',
+    't6.sub': 'Hands-On Post-Surgical Recovery',
+    't6.desc':'A specialized post-operative massage performed by Tania\'s expert hands — no machines, no devices. This targeted hands-on technique stimulates lymphatic drainage, breaks down early fibrosis, reduces swelling and fluid retention, and promotes faster healing after liposuction, tummy tuck, BBL, or any body contouring procedure. Visible improvement in just 1 session.',
+    't6.b1':  'Reduces post-op swelling & fluid retention',
+    't6.b2':  'Prevents & breaks down early fibrosis',
+    't6.b3':  'Stimulates lymphatic drainage by hand',
+    't6.b4':  '100% manual — no machines, no devices',
 
     /* ── Treatment 7 ── */
     't7.h3':  'Tummy Tuck Aftercare',
@@ -346,13 +346,13 @@ const translations = {
     't5.b4':  '100% a mano — sin máquinas, sin agujas',
 
     /* ── Treatment 6 ── */
-    't6.h3':  'Masaje de Preparación Pre-Op',
-    't6.sub': 'Antes de Tu Cirugía',
-    't6.desc':'Un masaje de preparación linfática realizado 1–2 semanas antes de tu cirugía programada. Este suave tratamiento activa tu sistema linfático, reduce la inflamación basal, mejora la elasticidad de la piel y prepara tu cuerpo para una recuperación más rápida y suave. Muchos cirujanos lo recomiendan antes de abdominoplastias, BBL, liposucción y procedimientos de senos.',
-    't6.b1':  'Activa el flujo linfático antes de la cirugía',
-    't6.b2':  'Reduce la inflamación basal',
-    't6.b3':  'Mejora la elasticidad de la piel y capacidad de sanación',
-    't6.b4':  'Recomendado 1–2 sesiones pre-cirugía',
+    't6.h3':  'Masaje Post-Op a Mano',
+    't6.sub': 'Recuperación Post-Quirúrgica Manual',
+    't6.desc':'Un masaje post-operatorio especializado realizado con las expertas manos de Tania — sin máquinas, sin dispositivos. Esta técnica a mano estimula el drenaje linfático, desintegra la fibrosis temprana, reduce la hinchazón y retención de líquidos, y promueve una cicatrización más rápida después de liposucción, abdominoplastia, BBL o cualquier procedimiento de contorno corporal. Mejora visible en solo 1 sesión.',
+    't6.b1':  'Reduce hinchazón y retención de líquidos post-op',
+    't6.b2':  'Previene y desintegra la fibrosis temprana',
+    't6.b3':  'Estimula el drenaje linfático a mano',
+    't6.b4':  '100% manual — sin máquinas, sin dispositivos',
 
     /* ── Treatment 7 ── */
     't7.h3':  'Cuidados Post-Abdominoplastia',
@@ -577,37 +577,48 @@ function initBeforeAfterSliders() {
     const handle = wrap.querySelector('.ba-handle');
     if (!before || !handle) return;
 
+    const isVert = wrap.classList.contains('ba-vertical');
     let dragging = false;
 
-    function setPos(clientX) {
+    function setPos(coord) {
       const rect = wrap.getBoundingClientRect();
-      const pct  = Math.max(5, Math.min(95, ((clientX - rect.left) / rect.width) * 100));
-      before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-      handle.style.left     = `${pct}%`;
+      if (isVert) {
+        const pct = Math.max(5, Math.min(95, ((coord - rect.top) / rect.height) * 100));
+        before.style.clipPath = `inset(0 0 ${100 - pct}% 0)`;
+        handle.style.top  = `${pct}%`;
+        handle.style.left = '0';
+      } else {
+        const pct = Math.max(5, Math.min(95, ((coord - rect.left) / rect.width) * 100));
+        before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+        handle.style.left = `${pct}%`;
+      }
     }
 
+    function getCoord(e)      { return isVert ? e.clientY : e.clientX; }
+    function getTouchCoord(e) { return isVert ? e.touches[0].clientY : e.touches[0].clientX; }
+
     // Mouse
-    wrap.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); });
-    document.addEventListener('mousemove', e => { if (dragging) setPos(e.clientX); });
+    wrap.addEventListener('mousedown', e => { dragging = true; setPos(getCoord(e)); });
+    document.addEventListener('mousemove', e => { if (dragging) setPos(getCoord(e)); });
     document.addEventListener('mouseup', () => { dragging = false; });
 
     // Touch
     wrap.addEventListener('touchstart', e => {
       dragging = true;
-      setPos(e.touches[0].clientX);
+      setPos(getTouchCoord(e));
     }, { passive: true });
     document.addEventListener('touchmove', e => {
-      if (dragging) setPos(e.touches[0].clientX);
+      if (dragging) setPos(getTouchCoord(e));
     }, { passive: true });
     document.addEventListener('touchend', () => { dragging = false; });
 
     // Start at 50%
-    setPos(wrap.getBoundingClientRect().left + wrap.getBoundingClientRect().width * 0.5);
-
-    // Re-init on resize
-    window.addEventListener('resize', () => {
-      setPos(wrap.getBoundingClientRect().left + wrap.getBoundingClientRect().width * 0.5);
-    }, { passive: true });
+    function initCenter() {
+      const r = wrap.getBoundingClientRect();
+      setPos(isVert ? r.top + r.height * 0.5 : r.left + r.width * 0.5);
+    }
+    initCenter();
+    window.addEventListener('resize', initCenter, { passive: true });
   });
 }
 
