@@ -318,6 +318,84 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
 }
 
 /* ============================================================
+   OCTOBER SPECIAL PROMO
+   ============================================================ */
+.promo-section {
+  --promo-pink: #F4BFC4;
+  --promo-pink-dk: #E79AA3;
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(244,191,196,.16) 0%, transparent 55%),
+    linear-gradient(160deg, #2A1210 0%, #170A08 100%);
+  color: var(--white);
+  padding: 6.5rem 0;
+}
+.promo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(3rem, 6vw, 6rem); align-items: center;
+}
+.promo-flyer img {
+  width: 100%; height: auto; display: block;
+  box-shadow: 0 30px 70px rgba(0,0,0,.45);
+  outline: 1px solid rgba(244,191,196,.35); outline-offset: 10px;
+}
+.promo-eyebrow {
+  display: inline-block;
+  font-size: .66rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: #1a0e0c; background: var(--promo-pink);
+  padding: .5rem 1rem; margin-bottom: 1.4rem;
+}
+.promo-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6.5vw, 5.4rem);
+  font-weight: 400; line-height: .95; letter-spacing: .01em;
+  color: var(--white); text-transform: uppercase;
+}
+.promo-title em { display: block; font-style: italic; color: var(--promo-pink); }
+.promo-sub {
+  margin-top: 1rem;
+  font-size: .78rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(255,255,255,.75);
+}
+.promo-price-row { display: flex; align-items: flex-end; gap: 1rem; margin: 1.6rem 0 1.4rem; }
+.promo-price {
+  font-family: var(--font-serif); font-weight: 600;
+  font-size: clamp(4rem, 8vw, 5.8rem); line-height: .85;
+  color: var(--white);
+}
+.promo-cur { font-size: .45em; vertical-align: top; margin-right: .05em; color: var(--promo-pink); }
+.promo-cents { font-size: .42em; vertical-align: top; }
+.promo-per { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.6); padding-bottom: .4rem; }
+.promo-bonus {
+  display: flex; align-items: center; gap: .9rem;
+  background: rgba(244,191,196,.12); border: 1px solid rgba(244,191,196,.45);
+  padding: 1rem 1.3rem; margin-bottom: 1.6rem; max-width: 440px;
+  color: var(--promo-pink);
+}
+.promo-bonus p { color: var(--white); font-size: .9rem; line-height: 1.5; margin: 0; }
+.promo-bonus strong {
+  font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--promo-pink); margin-right: .35rem;
+}
+.promo-features { display: flex; flex-direction: column; gap: .7rem; margin-bottom: 2.2rem; }
+.promo-features li { display: flex; align-items: center; gap: .7rem; font-size: .88rem; color: rgba(255,255,255,.85); }
+.promo-features svg { color: var(--promo-pink); flex-shrink: 0; }
+.promo-btn { background: var(--promo-pink); color: #1a0e0c; border-color: var(--promo-pink); font-weight: 700; }
+.promo-btn:hover { background: var(--white); border-color: var(--white); color: #1a0e0c; box-shadow: 0 10px 30px rgba(244,191,196,.3); }
+.promo-valid { margin-top: 1rem; font-size: .72rem; letter-spacing: .08em; color: rgba(255,255,255,.5); }
+
+@media (max-width: 860px) {
+  .promo-section { padding: 4.5rem 0; }
+  .promo-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .promo-flyer { max-width: 460px; margin: 0 auto; width: 100%; }
+  .promo-content { text-align: center; }
+  .promo-price-row, .promo-features li { justify-content: center; }
+  .promo-bonus { margin-left: auto; margin-right: auto; text-align: left; }
+}
+
+/* ============================================================
    SERVICES SPOTLIGHT STRIP
    ============================================================ */
 .spotlight-strip {

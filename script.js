@@ -3,6 +3,7 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  hideExpiredPromos();
   initNavbar();
   initMobileMenu();
   initBeforeAfterSliders();
@@ -10,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousel();
   initLanguage();
 });
+
+/* Seasonal offers remove themselves once their end date passes */
+function hideExpiredPromos() {
+  document.querySelectorAll('[data-expires]').forEach(el => {
+    const end = new Date(el.getAttribute('data-expires'));
+    if (!isNaN(end) && new Date() >= end) el.remove();
+  });
+}
 
 /* ============================================================
    LANGUAGE SWITCHER
@@ -39,6 +48,18 @@ const translations = {
     'brand.detox':     'Wood Therapy',
     'brand.anticell':  'Anti-Cellulite',
     'brand.bbl':       'BBL Recovery',
+
+    /* ── October special ── */
+    'promo.eyebrow':     'Limited-Time Offer · October Only',
+    'promo.sub':         'Body Sculpting + Wood Therapy',
+    'promo.per':         'per session',
+    'promo.bonus.label': 'Bonus',
+    'promo.bonus':       'Reductive enzyme included',
+    'promo.f1':          'Personalized treatment',
+    'promo.f2':          'Non-invasive',
+    'promo.f3':          'Results from the first session',
+    'promo.btn':         'Book the October Special',
+    'promo.valid':       'Valid through October 31, 2026',
 
     /* ── Spotlight ── */
     'spot.lymph.label':  'Lymphatic<br>Drainage',
@@ -264,6 +285,18 @@ const translations = {
     'brand.detox':     'Terapia de Madera',
     'brand.anticell':  'Anticelulitis',
     'brand.bbl':       'Recuperación BBL',
+
+    /* ── October special ── */
+    'promo.eyebrow':     'Oferta Limitada · Solo en Octubre',
+    'promo.sub':         'Bodysculpting + Maderoterapia',
+    'promo.per':         'por sesión',
+    'promo.bonus.label': 'Bonus',
+    'promo.bonus':       'Enzima reductiva incluida',
+    'promo.f1':          'Tratamiento personalizado',
+    'promo.f2':          'No invasivo',
+    'promo.f3':          'Resultados desde la primera sesión',
+    'promo.btn':         'Reservar la Oferta de Octubre',
+    'promo.valid':       'Válido hasta el 31 de octubre de 2026',
 
     /* ── Spotlight ── */
     'spot.lymph.label':  'Drenaje<br>Linfático',
