@@ -483,19 +483,6 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
   background: var(--gold-dk);
 }
 
-/* Text-only treatment card (no photo) */
-.tool-card--text { grid-template-columns: 1fr; }
-.tool-card--text .tool-info {
-  max-width: none;
-  display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  column-gap: clamp(2rem, 5vw, 5rem); align-items: end;
-  background: var(--cream); border: 1px solid var(--linen);
-  border-left: 3px solid var(--gold);
-  padding: clamp(2rem, 4vw, 3.5rem);
-}
-.tool-card--text .tool-info > :not(.benefits) { grid-column: 1; }
-.tool-card--text .benefits { grid-column: 2; grid-row: 1 / span 4; align-self: center; }
-
 /* ---- Media frames: every photo & video is the same 3:4 frame, filled edge to edge ---- */
 .tool-media { width: 100%; }
 .media-frame,
@@ -914,8 +901,6 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
   .tool-card { grid-template-columns: 1fr; gap: 2.2rem; padding: 3.5rem 0; }
   .tool-info { max-width: none; }
   .tool-media { max-width: 460px; margin: 0 auto; }
-  .tool-card--text .tool-info { grid-template-columns: 1fr; }
-  .tool-card--text .benefits { grid-column: 1; grid-row: auto; margin-top: .4rem; }
 }
 
 @media (max-width: 768px) {

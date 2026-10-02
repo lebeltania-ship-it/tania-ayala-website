@@ -122,13 +122,13 @@ const translations = {
     't6.b4':  '100% manual — no machines, no devices',
 
     /* ── Treatment 7 ── */
-    't7.h3':  'Brazilian Lymphatic Drainage',
-    't7.sub': 'Drenaje Linfático Brasileño',
-    't7.desc':'The Brazilian technique uses rhythmic, sweeping strokes along the lymphatic pathways to flush toxins, reduce fluid retention, and boost natural drainage. Unlike European drainage, the Brazilian method includes deeper pressure and specific maneuvering to sculpt the body while draining — leaving you lighter, less bloated, and visibly more contoured after just one session.',
-    't7.b1':  'Flushes toxins & reduces water retention',
-    't7.b2':  'Reduces bloating & puffiness instantly',
-    't7.b3':  'Sculpts & contours while draining',
-    't7.b4':  'Boosts immunity & circulation',
+    't7.h3':  'Booty Lift Sculpt',
+    't7.sub': 'Non-Surgical Glute Lift & Contouring',
+    't7.desc':'A non-surgical booty lift that lifts, rounds, and sculpts the glutes in a single session. Tania combines hands-on sculpting massage with wood therapy — rollers, cups, and paddles — to break down stubborn fat and cellulite, then uses a skin-tightening device and lymphatic techniques to firm the skin and drain fluid. The result is a rounder, firmer, more lifted booty with smoother, tighter skin — no surgery, no needles, no downtime.',
+    't7.b1':  'Lifts, rounds & shapes the glutes',
+    't7.b2':  'Breaks down fat & cellulite on hips and thighs',
+    't7.b3':  'Firms, tightens & smooths the skin',
+    't7.b4':  'Non-surgical — no needles, no downtime',
 
     /* ── Treatment 8 ── */
     't8.h3':  'Face Sculpt & Rejuvenation',
@@ -347,13 +347,13 @@ const translations = {
     't6.b4':  '100% manual — sin máquinas, sin dispositivos',
 
     /* ── Treatment 7 ── */
-    't7.h3':  'Drenaje Linfático Brasileño',
-    't7.sub': 'Brazilian Lymphatic Drainage',
-    't7.desc':'La técnica brasileña usa movimientos rítmicos y largos a lo largo de las vías linfáticas para eliminar toxinas, reducir la retención de líquidos y activar el drenaje natural. A diferencia del drenaje europeo, el método brasileño incluye presión más profunda y maniobras específicas que esculpen el cuerpo mientras drenan — dejándote más ligera, sin hinchazón y visiblemente más contorneada desde la primera sesión.',
-    't7.b1':  'Elimina toxinas y reduce la retención de líquidos',
-    't7.b2':  'Reduce la hinchazón y la pesadez al instante',
-    't7.b3':  'Esculpe y contornea mientras drena',
-    't7.b4':  'Activa la inmunidad y la circulación',
+    't7.h3':  'Booty Lift Sculpt',
+    't7.sub': 'Levantamiento de Glúteos sin Cirugía',
+    't7.desc':'Un levantamiento de glúteos sin cirugía que levanta, redondea y esculpe los glúteos en una sola sesión. Tania combina masaje escultor a mano con maderoterapia — rodillos, copas y paletas — para eliminar la grasa resistente y la celulitis, y luego usa un equipo reafirmante y técnicas linfáticas para tensar la piel y drenar líquidos. El resultado: glúteos más redondos, firmes y levantados, con una piel más lisa y tersa — sin cirugía, sin agujas y sin tiempo de recuperación.',
+    't7.b1':  'Levanta, redondea y moldea los glúteos',
+    't7.b2':  'Elimina grasa y celulitis en caderas y muslos',
+    't7.b3':  'Reafirma, tensa y suaviza la piel',
+    't7.b4':  'Sin cirugía — sin agujas, sin tiempo de recuperación',
 
     /* ── Treatment 8 ── */
     't8.h3':  'Escultura y Rejuvenecimiento Facial',
