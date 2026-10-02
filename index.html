@@ -3,12 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tania Ayala Body Sculpting — Brazilian & European lymphatic drainage, wood body sculpting, manual sculpting, face sculpting, anti-cellulite wood therapy, and pre & post-op plastic surgery aftercare.">
-  <title>Tania Ayala Body Sculpting | Wood Therapy & Lymphatic Drainage Massage</title>
-  <link rel="stylesheet" href="styles.css?v=28">
+  <meta name="description" content="Tania Ayala Body Sculpting in Chula Vista, CA — wood therapy, Brazilian lymphatic drainage, post-op fibrosis care, glute lift, face &amp; jawline sculpting, and authentic Colombian fajas.">
+  <meta name="theme-color" content="#3A1814">
+  <title>Tania Ayala Body Sculpting | Wood Therapy &amp; Lymphatic Drainage · Chula Vista</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tania Ayala Body Sculpting">
+  <meta property="og:description" content="Wood therapy, Brazilian lymphatic drainage, post-op care, face &amp; jawline sculpting and Colombian fajas — Chula Vista, CA.">
+  <meta property="og:image" content="https://lebeltania-ship-it.github.io/tania-ayala-website/images/og-cover.jpg">
+  <meta property="og:url" content="https://lebeltania-ship-it.github.io/tania-ayala-website/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="image" href="images/hero-massage.jpg">
+  <link rel="stylesheet" href="styles.css?v=44">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,9 +28,8 @@
   <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <span class="logo-main">Tania Ayala</span>
-        <span class="logo-sub">Body Sculpting</span>
+      <a href="#home" class="nav-logo" aria-label="Tania Ayala Body Sculpting — home">
+        <img src="images/logo-tania-gold.png" alt="Tania Ayala Body Sculpting" class="nav-logo-img" width="447" height="387">
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -44,27 +53,19 @@
 
   <!-- ===================== HERO ===================== -->
   <header class="hero" id="home">
-    <!--
-      ══ HOW TO ADD YOUR MASSAGE PHOTO ══
-      1. Save your photo as  hero-massage.jpg  in this same folder
-      2. Add  style="background-image:url('hero-massage.jpg')"  to the div below
-      The dark overlay will keep text readable automatically.
-    -->
     <div class="hero-bg"></div>
     <div class="hero-content">
       <p class="hero-eyebrow" data-i18n="hero.eyebrow">Máster Body Sculptor</p>
-      <h1 class="hero-title">Tania Ayala<br><em>Body Sculpting</em></h1>
+      <h1 class="hero-title"><span class="hero-name-script">Tania Ayala</span><em>Body Sculpting</em></h1>
       <p class="hero-tagline" data-i18n-html="hero.tagline">
-        Wood Body Sculpting · Manual Sculpting · Face Sculpting · Turkey Neck<br>
-        Brazilian &amp; European Lymphatic Drainage · BBL Recovery · Anti-Cellulite
+        Wood Therapy · Metal Therapy · Drainage Massage · Brazilian Drainage<br>BBL Recovery · Anti‑Cellulite Massage · Face Sculpt · Body Detox · Post‑Operation
       </p>
       <div class="hero-btns">
         <a href="#booking" class="btn btn-primary" data-i18n="hero.btn.book">Request an Appointment</a>
         <a href="#services" class="btn btn-ghost"  data-i18n="hero.btn.explore">Explore Services</a>
       </div>
     </div>
-<div class="hero-scroll-hint">
-      <span>Scroll to explore</span>
+    <div class="hero-scroll-hint" aria-hidden="true">
       <div class="scroll-arrow"></div>
     </div>
   </header>
@@ -85,14 +86,6 @@
       <span class="brand-strip-item" data-i18n="brand.anticell">Anti-Cellulite</span>
       <span class="brand-strip-sep"></span>
       <span class="brand-strip-item" data-i18n="brand.bbl">BBL Recovery</span>
-      <span class="brand-strip-sep"></span>
-      <span class="brand-strip-item" data-i18n="brand.preop">Pre &amp; Post-Op Care</span>
-      <span class="brand-strip-sep"></span>
-      <span class="brand-strip-item" data-i18n="brand.tummy">Tummy Tuck Recovery</span>
-      <span class="brand-strip-sep"></span>
-      <span class="brand-strip-item" data-i18n="brand.breast">Breast Surgery Aftercare</span>
-      <span class="brand-strip-sep"></span>
-      <span class="brand-strip-item" data-i18n="brand.turkey">Turkey Neck Treatment</span>
     </div>
   </div>
 
@@ -151,14 +144,7 @@
       <div class="about-grid">
         <div class="about-image-wrap">
           <div class="about-photo-frame">
-            <img src="images/about-tania.png" alt="Tania Ayala — Máster Body Sculptor" class="about-real-photo">
-            <!-- Placeholder shown only when photo is missing -->
-            <div class="about-photo-placeholder">
-              <div class="ph-inner">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                <span>about-tania.jpg</span>
-              </div>
-            </div>
+            <img src="images/about-tania.jpg" alt="Tania Ayala, Máster Body Sculptor" class="about-real-photo" width="944" height="1330" loading="lazy">
           </div>
           <div class="about-credential">
             <span class="about-cred-title">Máster Body Sculptor</span>
@@ -168,9 +154,9 @@
 
         <div class="about-content">
           <p class="eyebrow" data-i18n="about.eyebrow">Meet Your Specialist</p>
-          <h2 data-i18n="about.h2">Expert Care for Every Stage of Your Journey</h2>
-          <p data-i18n-html="about.p1"><strong>Tania Ayala</strong> is a certified Máster Body Sculptor specializing in <strong>wood body sculpting</strong>, <strong>manual sculpting</strong>, <strong>face sculpting</strong>, and <strong>Brazilian &amp; European lymphatic drainage</strong>. Wood therapy naturally breaks down fat, eliminates cellulite, tightens skin, and sculpts your contour — while lymphatic drainage detoxifies, reduces inflammation, and accelerates healing from the inside out.</p>
-          <p data-i18n-html="about.p2">Whether you want to reshape your body, rejuvenate your face, or recover from a BBL, tummy tuck, or liposuction — Tania's specialized protocols deliver <strong>real, visible results</strong> through 100% natural, non-surgical techniques. Every session is fully personalized to your body and your goals.</p>
+          <h2 data-i18n="about.h2">Get the Body You Want — Naturally, Without Surgery</h2>
+          <p data-i18n-html="about.p1">With <strong>over 10 years of experience</strong>, <strong>Tania Ayala</strong> is a certified Máster Body Sculptor dedicated to helping you achieve the sexy, sculpted body you desire — <strong>100% naturally, without any procedures</strong>. Specializing in <strong>wood body sculpting</strong>, <strong>manual sculpting</strong>, <strong>face &amp; jawline sculpting</strong>, and <strong>Brazilian &amp; European lymphatic drainage</strong>, Tania has helped hundreds of clients transform their bodies and feel confident in their skin.</p>
+          <p data-i18n-html="about.p2">Wood therapy breaks down stubborn fat, eliminates cellulite, tightens skin, and defines your curves. Lymphatic drainage flushes toxins, reduces inflammation, and accelerates healing from the inside out. Whether you want to reshape your body, lift your face, define your jawline, or recover from a BBL, lipo, or tummy tuck — Tania's personalized protocols deliver <strong>real, visible results</strong> that last.</p>
           <div class="stats-row">
             <div class="stat">
               <span class="stat-n">500+</span>
@@ -195,11 +181,11 @@
   <section id="services" class="section services-section">
     <div class="container">
       <p class="eyebrow text-center" data-i18n="svc.eyebrow">Our Treatments</p>
-      <h2 class="text-center" data-i18n="svc.h2">Lymphatic &amp; Wood Sculpting</h2>
-      <p class="section-sub text-center" data-i18n="svc.sub">Each technique is tailored to your body and goals. Drag the slider on each photo to see real before &amp; after results.</p>
+      <h2 class="text-center" data-i18n="svc.h2">Lymphatic Drainage &amp; Wood Sculpting</h2>
+      <p class="section-sub text-center" data-i18n="svc.sub">Each technique is tailored to your body and goals. Watch real sessions and drag the slider on each photo to compare real before &amp; after results.</p>
 
-      <!-- Treatment 1 — Reductive Massage -->
-      <div class="tool-card">
+      <!-- Treatment 01 — Reductive Body Massage -->
+      <article class="tool-card">
         <div class="tool-info">
           <div class="tool-number">01</div>
           <h3 data-i18n="t1.h3">Reductive Body Massage</h3>
@@ -212,24 +198,24 @@
             <li data-i18n="t1.b4">Activates circulation &amp; lymphatic drainage</li>
           </ul>
         </div>
-        <div class="tool-ba">
-          <div class="ba-wrap" data-ba="1">
-            <div class="ba-after  ba-split" style="background-image:url('images/lymphatic-results.jpg');background-position:right center;"></div>
-            <div class="ba-before ba-split" style="background-image:url('images/lymphatic-results.jpg');background-position:left center;"></div>
-            <div class="ba-handle">
+        <div class="tool-media">
+          <div class="ba-wrap" tabindex="0" role="slider" aria-label="Reductive Body Massage — before and after. Drag or use arrow keys to compare." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <img class="ba-img ba-after"  src="images/ba/body-sculpt-after.jpg"  alt="Reductive Body Massage — after treatment"  loading="lazy" decoding="async" draggable="false">
+            <img class="ba-img ba-before" src="images/ba/body-sculpt-before.jpg" alt="Reductive Body Massage — before treatment" loading="lazy" decoding="async" draggable="false">
+            <div class="ba-handle" aria-hidden="true">
               <div class="ba-line"></div>
               <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#C9A84C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#8B6914" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
             <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
             <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Treatment 2 — Body Contouring Paddle -->
-      <div class="tool-card tool-card-flip">
+      <!-- Treatment 02 — Wood Body Sculpting -->
+      <article class="tool-card">
         <div class="tool-info">
           <div class="tool-number">02</div>
           <h3 data-i18n="t2.h3">Wood Body Sculpting</h3>
@@ -242,21 +228,17 @@
             <li data-i18n="t2.b4">Stimulates collagen production</li>
           </ul>
         </div>
-        <div class="tool-ba">
-          <div class="tool-video-wrap">
-            <video
-              src="videos/wood-sculpting-results.mp4"
-              controls
-              playsinline
-              preload="metadata"
-              aria-label="Wood Body Sculpting — Real Results">
+        <div class="tool-media">
+          <div class="media-frame">
+            <video class="treatment-video" muted loop playsinline preload="none" poster="videos/wood-sculpting-poster.jpg" aria-label="Wood Body Sculpting — real session video">
+              <source src="videos/wood-sculpting.mp4" type="video/mp4">
             </video>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Treatment 3 — Manual Belly Sculpting -->
-      <div class="tool-card">
+      <!-- Treatment 03 — Manual Belly Sculpting -->
+      <article class="tool-card">
         <div class="tool-info">
           <div class="tool-number">03</div>
           <h3 data-i18n="t3.h3">Manual Belly Sculpting</h3>
@@ -269,97 +251,70 @@
             <li data-i18n="t3.b4">Firms skin &amp; tightens the core</li>
           </ul>
         </div>
-        <div class="tool-ba">
-          <div class="tool-video-wrap">
-            <video
-              src="videos/wood-cupping-belly.mp4"
-              controls
-              playsinline
-              preload="metadata"
-              aria-label="Wood Cupping Belly Sculpting — Real Session">
+        <div class="tool-media">
+          <div class="media-frame">
+            <video class="treatment-video" muted loop playsinline preload="none" poster="videos/belly-sculpting-poster.jpg" aria-label="Manual Belly Sculpting — real session video">
+              <source src="videos/belly-sculpting.mp4" type="video/mp4">
             </video>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Treatment 4 — Manual Face & Neck Lift -->
-      <div class="tool-card tool-card-flip">
+      <!-- Treatment 04 — Fibrosis Post-Operatoria -->
+      <article class="tool-card">
         <div class="tool-info">
           <div class="tool-number">04</div>
-          <h3 data-i18n="t4.h3">Manual Face &amp; Neck Lift</h3>
-          <p class="tool-subtitle" data-i18n="t4.sub">Advanced Neck Rejuvenation</p>
-          <p class="tool-desc" data-i18n="t4.desc">Tania's expert hands manually lift, firm, and redefine your facial contours, jawline, and neck — delivering a natural facelift effect without any needles or surgery. This signature technique uses precise, targeted pressure to sculpt the face, tighten loose neck skin, and eliminate turkey neck. Results are visible from session one, with a more defined, youthful contour that builds with every session.</p>
+          <h3 data-i18n="t4.h3">Fibrosis Post-Operatoria</h3>
+          <p class="tool-subtitle" data-i18n="t4.sub">Manual Fibrosis Treatment</p>
+          <p class="tool-desc" data-i18n="t4.desc">A specialized hands-on treatment to break down and dissolve fibrosis — the hardened, irregular tissue that develops after liposuction, tummy tuck, BBL, or C-section. Tania uses precise manual pressure to soften lumps, smooth uneven skin, restore circulation, and reshape your contour after surgery. Visible results in as few as 6 sessions.</p>
           <ul class="benefits">
-            <li data-i18n="t4.b1">Lifts &amp; defines the jawline</li>
-            <li data-i18n="t4.b2">Tightens loose neck &amp; turkey neck skin</li>
-            <li data-i18n="t4.b3">Sculpts cheekbones &amp; facial contours</li>
-            <li data-i18n="t4.b4">Natural facelift — no needles, no surgery</li>
+            <li data-i18n="t4.b1">Breaks down post-surgical fibrosis &amp; lumps</li>
+            <li data-i18n="t4.b2">Smooths uneven skin after lipo or tummy tuck</li>
+            <li data-i18n="t4.b3">Restores circulation &amp; softness to hardened tissue</li>
+            <li data-i18n="t4.b4">100% by hand — no machines, no needles</li>
           </ul>
         </div>
-        <div class="tool-ba">
-          <div class="ba-wrap" data-ba="4">
-            <div class="ba-after ba-split" style="background-image:url('images/neck-facelift-ba.jpg');background-position:right center;"></div>
-            <div class="ba-before ba-split" style="background-image:url('images/neck-facelift-ba.jpg');background-position:left center;"></div>
-            <div class="ba-handle">
-              <div class="ba-line"></div>
-              <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#C9A84C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-            </div>
-            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
-            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
+        <div class="tool-media">
+          <div class="media-frame">
+            <video class="treatment-video" muted loop playsinline preload="none" poster="videos/fibrosis-poster.jpg" aria-label="Post-Op Fibrosis Treatment — real session video">
+              <source src="videos/fibrosis.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Treatment 5 — Fibrosis Treatment -->
-      <div class="tool-card">
+      <!-- Treatment 05 — Glute Lift & Anti-Cellulite -->
+      <article class="tool-card">
         <div class="tool-info">
           <div class="tool-number">05</div>
-          <h3 data-i18n="t5.h3">Fibrosis &amp; Post-Op Contouring</h3>
-          <p class="tool-subtitle" data-i18n="t5.sub">Manual Fibrosis Treatment</p>
-          <p class="tool-desc" data-i18n="t5.desc">A specialized hands-on treatment designed to break down and dissolve fibrosis — the hardened, irregular tissue that develops after liposuction, tummy tuck, BBL, or C-section. Tania uses precise manual pressure and targeted hand techniques to soften lumps, smooth uneven skin, restore circulation to affected areas, and reshape your contour after surgery. Visible results in as few as 6 sessions.</p>
+          <h3 data-i18n="t5.h3">Levantamiento de Glúteos</h3>
+          <p class="tool-subtitle" data-i18n="t5.sub">Glute Lifting &amp; Anti-Cellulite</p>
+          <p class="tool-desc" data-i18n="t5.desc">A powerful sculpting treatment targeting the glutes, thighs, and hips to lift, firm, and smooth. Tania combines deep tissue techniques with anti-cellulite work to reshape the posterior, reduce orange-peel texture, and define curves — leaving you visibly more lifted and contoured from the very first session.</p>
           <ul class="benefits">
-            <li data-i18n="t5.b1">Breaks down post-surgical fibrosis &amp; lumps</li>
-            <li data-i18n="t5.b2">Smooths uneven skin after lipo or tummy tuck</li>
-            <li data-i18n="t5.b3">Restores circulation &amp; softness to hardened tissue</li>
-            <li data-i18n="t5.b4">100% by hand — no machines, no needles</li>
+            <li data-i18n="t5.b1">Lifts &amp; firms the glutes naturally</li>
+            <li data-i18n="t5.b2">Reduces cellulite &amp; smooths skin texture</li>
+            <li data-i18n="t5.b3">Sculpts &amp; defines the hips and thighs</li>
+            <li data-i18n="t5.b4">Activates circulation for faster visible results</li>
           </ul>
         </div>
-        <div class="tool-ba">
-          <div class="ba-wrap" data-ba="5">
-            <div class="ba-after ba-split" style="background-image:url('images/fibrosis-ba.jpg');background-position:right center;"></div>
-            <div class="ba-before ba-split" style="background-image:url('images/fibrosis-ba.jpg');background-position:left center;"></div>
-            <div class="ba-handle">
+        <div class="tool-media">
+          <div class="ba-wrap" tabindex="0" role="slider" aria-label="Glute Lift &amp; Anti-Cellulite — before and after. Drag or use arrow keys to compare." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <img class="ba-img ba-after"  src="images/ba/glutes-after.jpg"  alt="Glute Lift &amp; Anti-Cellulite — after treatment"  loading="lazy" decoding="async" draggable="false">
+            <img class="ba-img ba-before" src="images/ba/glutes-before.jpg" alt="Glute Lift &amp; Anti-Cellulite — before treatment" loading="lazy" decoding="async" draggable="false">
+            <div class="ba-handle" aria-hidden="true">
               <div class="ba-line"></div>
               <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#C9A84C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#8B6914" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
             <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
             <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
           </div>
         </div>
-      </div>
+      </article>
 
-    </div>
-  </section>
-
-  <!-- ===================== SURGICAL CARE DIVIDER ===================== -->
-  <div class="surgical-banner">
-    <div class="container">
-      <p class="eyebrow text-center" data-i18n="surgical.eyebrow">Specialized Care</p>
-      <h2 class="text-center" data-i18n="surgical.h2">Pre-Op &amp; Post-Op Massage</h2>
-      <p class="text-center" data-i18n="surgical.p">Preparing for or recovering from plastic surgery? Our specialized massage protocols are designed to optimize your results, reduce swelling, prevent fibrosis, and help you heal faster — safely and gently.</p>
-    </div>
-  </div>
-
-  <!-- ===================== SURGICAL SERVICES ===================== -->
-  <section class="section services-section" style="padding-top:4rem;">
-    <div class="container">
-
-      <!-- Treatment 6 — Post-Op Hand Massage -->
-      <div class="tool-card surgical">
+      <!-- Treatment 06 — Post-Op Hand Massage -->
+      <article class="tool-card tool-card--text">
         <div class="tool-info">
           <div class="tool-number">06</div>
           <h3 data-i18n="t6.h3">Post-Op Hand Massage</h3>
@@ -372,97 +327,90 @@
             <li data-i18n="t6.b4">100% manual — no machines, no devices</li>
           </ul>
         </div>
-        <div class="tool-ba">
-          <div class="ba-wrap ba-vertical" data-ba="6">
-            <div class="ba-after ba-split-v" style="background-image:url('images/postop-hand-ba.jpg');background-position:center bottom;"></div>
-            <div class="ba-before ba-split-v" style="background-image:url('images/postop-hand-ba.jpg');background-position:center top;"></div>
-            <div class="ba-handle">
-              <div class="ba-line"></div>
-              <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M4 8l7-6 7 6M4 14l7 6 7-6" stroke="#4A4540" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-            </div>
-            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
-            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
-          </div>
-        </div>
-      </div>
+      </article>
 
-      <!-- Treatment 7 — Tummy Tuck Recovery -->
-      <div class="tool-card tool-card-flip surgical">
+      <!-- Treatment 07 — Brazilian Lymphatic Drainage -->
+      <article class="tool-card">
         <div class="tool-info">
           <div class="tool-number">07</div>
-          <h3 data-i18n="t7.h3">Tummy Tuck Aftercare</h3>
-          <p class="tool-subtitle" data-i18n="t7.sub">Abdominoplasty Recovery Massage</p>
-          <p class="tool-desc" data-i18n="t7.desc">A specialized post-abdominoplasty massage protocol to accelerate healing after your tummy tuck. We use ultra-gentle lymphatic drainage to reduce swelling, seroma risk, and bruising, followed by soft tissue work to prevent fibrosis, smooth lumps, and help your skin adhere beautifully to your new contour.</p>
+          <h3 data-i18n="t7.h3">Brazilian Lymphatic Drainage</h3>
+          <p class="tool-subtitle" data-i18n="t7.sub">Drenaje Linfático Brasileño</p>
+          <p class="tool-desc" data-i18n="t7.desc">The Brazilian technique uses rhythmic, sweeping strokes along the lymphatic pathways to flush toxins, reduce fluid retention, and boost natural drainage. Unlike European drainage, the Brazilian method includes deeper pressure and specific maneuvering to sculpt the body while draining — leaving you lighter, less bloated, and visibly more contoured after just one session.</p>
           <ul class="benefits">
-            <li data-i18n="t7.b1">Reduces post-surgical swelling &amp; seroma</li>
-            <li data-i18n="t7.b2">Prevents and treats fibrosis</li>
-            <li data-i18n="t7.b3">Smooths skin to new abdominal contour</li>
-            <li data-i18n="t7.b4">Safe from week 1 post-op (with surgeon approval)</li>
+            <li data-i18n="t7.b1">Flushes toxins &amp; reduces water retention</li>
+            <li data-i18n="t7.b2">Reduces bloating &amp; puffiness instantly</li>
+            <li data-i18n="t7.b3">Sculpts &amp; contours while draining</li>
+            <li data-i18n="t7.b4">Boosts immunity &amp; circulation</li>
           </ul>
         </div>
-        <div class="tool-ba">
-          <div class="ba-wrap" data-ba="7">
-            <div class="ba-after">
-              <div class="placeholder-img after-ph after-green">
-                <div class="ph-inner"><span>AFTER — Add Photo</span></div>
-              </div>
-            </div>
-            <div class="ba-before">
-              <div class="placeholder-img before-ph">
-                <div class="ph-inner"><span>BEFORE — Add Photo</span></div>
-              </div>
-            </div>
-            <div class="ba-handle">
-              <div class="ba-line"></div>
-              <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#4A4540" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-            </div>
-            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
-            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
+        <div class="tool-media">
+          <div class="media-frame">
+            <video class="treatment-video" muted loop playsinline preload="none" poster="videos/lymphatic-drainage-poster.jpg" aria-label="Brazilian Lymphatic Drainage — real session video">
+              <source src="videos/lymphatic-drainage.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Treatment 8 — Breast Surgery Recovery -->
-      <div class="tool-card surgical">
+      <!-- Treatment 08 — Face Sculpt & Rejuvenation -->
+      <article class="tool-card">
         <div class="tool-info">
           <div class="tool-number">08</div>
-          <h3 data-i18n="t8.h3">Breast Surgery Recovery</h3>
-          <p class="tool-subtitle" data-i18n="t8.sub">Post-Op Breast Massage</p>
-          <p class="tool-desc" data-i18n="t8.desc">Gentle post-operative massage for breast augmentation, breast reduction, breast lift, and implant revision. This specialized technique reduces firmness around implants, prevents capsular contracture, drains excess fluid from the axillary lymph nodes, and restores natural movement and softness to the surrounding tissue.</p>
+          <h3 data-i18n="t8.h3">Face Sculpt &amp; Rejuvenation</h3>
+          <p class="tool-subtitle" data-i18n="t8.sub">Advanced Facial Lifting</p>
+          <p class="tool-desc" data-i18n="t8.desc">Tania's expert hands manually lift, firm, and smooth the facial tissue — reducing wrinkles, sagging, and deep creasing without any injections or surgery. This non-invasive technique stimulates collagen, tightens the skin, and restores a youthful, lifted contour to the face and neck. Visible results from the very first session.</p>
           <ul class="benefits">
-            <li data-i18n="t8.b1">Softens implants &amp; reduces firmness</li>
-            <li data-i18n="t8.b2">Helps prevent capsular contracture</li>
-            <li data-i18n="t8.b3">Drains axillary lymph nodes &amp; reduces swelling</li>
-            <li data-i18n="t8.b4">Safe for augmentation, reduction &amp; lift recovery</li>
+            <li data-i18n="t8.b1">Reduces fine lines &amp; deep wrinkles</li>
+            <li data-i18n="t8.b2">Lifts sagging skin naturally</li>
+            <li data-i18n="t8.b3">Stimulates collagen &amp; skin elasticity</li>
+            <li data-i18n="t8.b4">No needles, no surgery, no downtime</li>
           </ul>
         </div>
-        <div class="tool-ba">
-          <div class="ba-wrap" data-ba="8">
-            <div class="ba-after">
-              <div class="placeholder-img after-ph after-green">
-                <div class="ph-inner"><span>AFTER — Add Photo</span></div>
-              </div>
-            </div>
-            <div class="ba-before">
-              <div class="placeholder-img before-ph">
-                <div class="ph-inner"><span>BEFORE — Add Photo</span></div>
-              </div>
-            </div>
-            <div class="ba-handle">
+        <div class="tool-media">
+          <div class="ba-wrap" tabindex="0" role="slider" aria-label="Face Sculpt &amp; Rejuvenation — before and after. Drag or use arrow keys to compare." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <img class="ba-img ba-after"  src="images/ba/face-after.jpg"  alt="Face Sculpt &amp; Rejuvenation — after treatment"  loading="lazy" decoding="async" draggable="false">
+            <img class="ba-img ba-before" src="images/ba/face-before.jpg" alt="Face Sculpt &amp; Rejuvenation — before treatment" loading="lazy" decoding="async" draggable="false">
+            <div class="ba-handle" aria-hidden="true">
               <div class="ba-line"></div>
               <div class="ba-circle">
-                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#4A4540" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#8B6914" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
             <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
             <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
           </div>
         </div>
-      </div>
+      </article>
+
+      <!-- Treatment 09 — Jaw Line Sculpting -->
+      <article class="tool-card">
+        <div class="tool-info">
+          <div class="tool-number">09</div>
+          <h3 data-i18n="t9.h3">Jaw Line Sculpting</h3>
+          <p class="tool-subtitle" data-i18n="t9.sub">Chin &amp; Jawline Contouring</p>
+          <p class="tool-desc" data-i18n="t9.desc">A precise manual technique targeting the jaw, chin, and neck to eliminate double chin, define the jawline, and restore a sharp, lifted profile. Tania sculpts with targeted pressure along the mandibular line to reduce excess tissue, firm the skin, and create a naturally defined contour — results visible from session one.</p>
+          <ul class="benefits">
+            <li data-i18n="t9.b1">Eliminates double chin &amp; jowls</li>
+            <li data-i18n="t9.b2">Defines &amp; sharpens the jawline</li>
+            <li data-i18n="t9.b3">Lifts &amp; firms the neck skin</li>
+            <li data-i18n="t9.b4">100% manual — no surgery, no fillers</li>
+          </ul>
+        </div>
+        <div class="tool-media">
+          <div class="ba-wrap" tabindex="0" role="slider" aria-label="Jaw Line Sculpting — before and after. Drag or use arrow keys to compare." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <img class="ba-img ba-after"  src="images/ba/jawline-after.jpg"  alt="Jaw Line Sculpting — after treatment"  loading="lazy" decoding="async" draggable="false">
+            <img class="ba-img ba-before" src="images/ba/jawline-before.jpg" alt="Jaw Line Sculpting — before treatment" loading="lazy" decoding="async" draggable="false">
+            <div class="ba-handle" aria-hidden="true">
+              <div class="ba-line"></div>
+              <div class="ba-circle">
+                <svg width="22" height="22" viewBox="0 0 22 22"><path d="M8 4l-6 7 6 7M14 4l6 7-6 7" stroke="#8B6914" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <span class="ba-tag ba-tag-l" data-i18n="ba.before">Before</span>
+            <span class="ba-tag ba-tag-r" data-i18n="ba.after">After</span>
+          </div>
+        </div>
+      </article>
 
     </div>
   </section>
@@ -516,168 +464,236 @@
       <h2 class="text-center" data-i18n="shop.h2">Fajas &amp; Body Shapers</h2>
       <p class="section-sub text-center" data-i18n="shop.sub">We carry a curated selection of authentic Colombian fajas and waist trainers in-spa — the perfect complement to your sculpting sessions for faster, longer-lasting results.</p>
 
+      <p class="shop-shipping-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span data-i18n="shop.shipping">All prices include shipping</span></p>
+
       <div class="shop-grid">
 
-        <!-- Product 1 -->
+        <!-- 1 Faja Guitarra -->
         <div class="shop-card">
           <div class="shop-img-wrap">
-            <div class="shop-img-ph">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span data-i18n="shop.addphoto">Add Product Photo</span>
-            </div>
-            <div class="shop-badge-wrap">
-              <span class="shop-badge new" data-i18n="shop.badge.new">New</span>
-            </div>
-          </div>
-          <div class="shop-body">
-            <span class="shop-category" data-i18n="s1.cat">Post-Surgery</span>
-            <h3 class="shop-name">Faja Post-Cirugía BBL</h3>
-            <p class="shop-desc" data-i18n="s1.desc">Specially designed for BBL &amp; lipo recovery. Maximum compression with open-bust design and adjustable straps. Available in-spa.</p>
-            <div class="shop-sizes">
-              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
-            </div>
-            <div class="shop-price-row">
-              <div>
-                <span class="shop-price"><span>$</span>89</span>
-              </div>
-              <a href="https://wa.me/16194511398?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Faja%20Post-Cirugia%20BBL" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="shop-card">
-          <div class="shop-img-wrap">
-            <div class="shop-img-ph">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span data-i18n="shop.addphoto">Add Product Photo</span>
-            </div>
+            <img src="images/fajas/faja-guitarra.jpg" alt="Faja Guitarra Colombiana" loading="lazy" decoding="async" width="650" height="1126">
             <div class="shop-badge-wrap">
               <span class="shop-badge hot" data-i18n="shop.badge.hot">Best Seller</span>
             </div>
           </div>
           <div class="shop-body">
-            <span class="shop-category" data-i18n="s2.cat">Daily Wear</span>
-            <h3 class="shop-name">Faja Reductora Body</h3>
-            <p class="shop-desc" data-i18n="s2.desc">Full-body slimming shaper for everyday use. Flattens tummy, lifts glutes, and smooths love handles. Ask about sizing at your appointment.</p>
+            <span class="shop-category" data-i18n="s1.cat">Colombian Faja</span>
+            <h3 class="shop-name">Faja Guitarra</h3>
+            <p class="shop-desc" data-i18n="s1.desc">Ideal for hourglass figures. Controls and shapes the back, abdomen, and waist. Great for daily &amp; post-op wear.</p>
             <div class="shop-sizes">
               <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
             </div>
             <div class="shop-price-row">
-              <div>
-                <span class="shop-price"><span>$</span>75</span>
-              </div>
-              <a href="https://wa.me/16194511398?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Faja%20Reductora%20Body" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+              <div><span class="shop-price"><span>$</span>170</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/D4UNIDZSBH4MGJDABONNMHJG" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20la%20Faja%20Guitarra%20%24170%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
             </div>
           </div>
         </div>
 
-        <!-- Product 3 -->
+        <!-- 2 Faja Guitarra Plus -->
         <div class="shop-card">
           <div class="shop-img-wrap">
-            <div class="shop-img-ph">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span data-i18n="shop.addphoto">Add Product Photo</span>
-            </div>
-            <div class="shop-badge-wrap">
-              <span class="shop-badge sale" data-i18n="shop.badge.sale15">Save 15%</span>
-            </div>
-          </div>
-          <div class="shop-body">
-            <span class="shop-category" data-i18n="s3.cat">Waist Trainer</span>
-            <h3 class="shop-name">Cinturilla Reductora</h3>
-            <p class="shop-desc" data-i18n="s3.desc">Latex waist trainer for maximum sweat and compression. Pair with your sculpting sessions for faster, more visible results.</p>
-            <div class="shop-sizes">
-              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span>
-            </div>
-            <div class="shop-price-row">
-              <div>
-                <span class="shop-price"><span>$</span>55</span>
-                <span class="shop-old-price">$65</span>
-              </div>
-              <a href="https://wa.me/16194511398?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Cinturilla%20Reductora" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="shop-card">
-          <div class="shop-img-wrap">
-            <div class="shop-img-ph">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span data-i18n="shop.addphoto">Add Product Photo</span>
-            </div>
+            <img src="images/fajas/faja-guitarra-plus.jpg" alt="Faja Guitarra Plus" loading="lazy" decoding="async" width="650" height="1126">
             <div class="shop-badge-wrap">
               <span class="shop-badge new" data-i18n="shop.badge.new">New</span>
             </div>
           </div>
           <div class="shop-body">
-            <span class="shop-category" data-i18n="s4.cat">Post-Surgery</span>
-            <h3 class="shop-name">Faja Post-Lipo Abdominal</h3>
-            <p class="shop-desc" data-i18n="s4.desc">High-compression abdominal binder for post-liposuction recovery. Reduces swelling and prevents fibrosis. Available in-spa by appointment.</p>
+            <span class="shop-category" data-i18n="s2.cat">Colombian Faja</span>
+            <h3 class="shop-name">Faja Guitarra Plus</h3>
+            <p class="shop-desc" data-i18n="s2.desc">For curvy figures with full hips and glutes. High compression, full back coverage, wide padded adjustable straps.</p>
             <div class="shop-sizes">
-              <span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
             </div>
             <div class="shop-price-row">
-              <div>
-                <span class="shop-price"><span>$</span>95</span>
-              </div>
-              <a href="https://wa.me/16194511398?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Faja%20Post-Lipo%20Abdominal" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+              <div><span class="shop-price"><span>$</span>180</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/QPGFBLLX6KUVOT5LKOC3FB7P" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20la%20Faja%20Guitarra%20Plus%20%24180%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
             </div>
           </div>
         </div>
 
-        <!-- Product 5 -->
+        <!-- 3 Faja Strapless -->
         <div class="shop-card">
           <div class="shop-img-wrap">
-            <div class="shop-img-ph">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span data-i18n="shop.addphoto">Add Product Photo</span>
-            </div>
+            <img src="images/fajas/faja-straple.jpg" alt="Faja Strapless" loading="lazy" decoding="async" width="650" height="1126">
             <div class="shop-badge-wrap">
-              <span class="shop-badge hot" data-i18n="shop.badge.hot">Best Seller</span>
+              <span class="shop-badge new" data-i18n="shop.badge.new">New</span>
             </div>
           </div>
           <div class="shop-body">
-            <span class="shop-category" data-i18n="s5.cat">Body Shaper</span>
-            <h3 class="shop-name">Body Entero Levanta Cola</h3>
-            <p class="shop-desc" data-i18n="s5.desc">Full-body shaper with butt-lifting design. Seamless under clothing, perfect for daily use. Visit us to find your perfect fit.</p>
+            <span class="shop-category" data-i18n="s3.cat">Colombian Faja</span>
+            <h3 class="shop-name">Faja Strapless</h3>
+            <p class="shop-desc" data-i18n="s3.desc">Strapless design for any outfit. Adjustable straps and bottom closure. Ideal for daily and post-surgery use.</p>
             <div class="shop-sizes">
-              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span>
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
             </div>
             <div class="shop-price-row">
-              <div>
-                <span class="shop-price"><span>$</span>85</span>
-              </div>
-              <a href="https://wa.me/16194511398?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Body%20Entero%20Levanta%20Cola" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+              <div><span class="shop-price"><span>$</span>160</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/PVJUIYTEP4FD7CU7QJRLZYXC" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20la%20Faja%20Strapless%20%24160%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
             </div>
           </div>
         </div>
 
-        <!-- Product 6 -->
+        <!-- 4 Faja Short Corto $170 -->
         <div class="shop-card">
           <div class="shop-img-wrap">
-            <div class="shop-img-ph">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span data-i18n="shop.addphoto">Add Product Photo</span>
+            <img src="images/fajas/faja-short-corto.jpg" alt="Faja Short Corto" loading="lazy" decoding="async" width="650" height="1126">
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s4.cat">Colombian Faja</span>
+            <h3 class="shop-name">Faja Short Corto</h3>
+            <p class="shop-desc" data-i18n="s4.desc">Comfortable and secure for daily &amp; post-op use. The perfect complement after your surgery under any look.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
             </div>
+            <div class="shop-price-row">
+              <div><span class="shop-price"><span>$</span>170</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/BT6ODDXS7SQ56IN55NJKEB6U" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20la%20Faja%20Short%20Corto%20%24170%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Faja Short Largo -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <img src="images/fajas/faja-short-largo.jpg" alt="Faja Short Largo" loading="lazy" decoding="async" width="650" height="1126">
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s5.cat">Colombian Faja</span>
+            <h3 class="shop-name">Faja Short Largo</h3>
+            <p class="shop-desc" data-i18n="s5.desc">For daily, post-op, or postpartum use. Comfortable and secure under any outfit. Perfect after surgery.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+            </div>
+            <div class="shop-price-row">
+              <div><span class="shop-price"><span>$</span>180</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/UEN7GZ3N5IAEVGFWPQTXNNO3" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20la%20Faja%20Short%20Largo%20%24180%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Short Alto -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <img src="images/fajas/short-alto.jpg" alt="Short Alto Colombiano" loading="lazy" decoding="async" width="650" height="1126">
             <div class="shop-badge-wrap">
-              <span class="shop-badge sale" data-i18n="shop.badge.sale10">Save 10%</span>
+              <span class="shop-badge hot" data-i18n="shop.badge.hot">Best Seller</span>
             </div>
           </div>
           <div class="shop-body">
             <span class="shop-category" data-i18n="s6.cat">Shapewear</span>
-            <h3 class="shop-name">Short Bermuda Reductora</h3>
-            <p class="shop-desc" data-i18n="s6.desc">High-waisted compression shorts for thighs and glutes. Ideal for wearing during maderotherapy for enhanced sculpting results.</p>
+            <h3 class="shop-name">Short Alto</h3>
+            <p class="shop-desc" data-i18n="s6.desc">Great for daily use. Small boning in the waistband keeps the garment in place and prevents rolling.</p>
             <div class="shop-sizes">
-              <span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
             </div>
             <div class="shop-price-row">
-              <div>
-                <span class="shop-price"><span>$</span>49</span>
-                <span class="shop-old-price">$55</span>
-              </div>
-              <a href="https://wa.me/16194511398?text=Hi%20Tania!%20I%27d%20like%20to%20inquire%20about%20the%20Short%20Bermuda%20Reductora" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a>
+              <div><span class="shop-price"><span>$</span>120</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/AMTBOSGZCJKQ7NQXNVTYGX3X" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20el%20Short%20Alto%20%24120%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 Short Corto -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <img src="images/fajas/short-corto.jpg" alt="Short Corto Colombiano" loading="lazy" decoding="async" width="650" height="1126">
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s7.cat">Shapewear</span>
+            <h3 class="shop-name">Short Corto</h3>
+            <p class="shop-desc" data-i18n="s7.desc">Ideal for shaping and slimming the waist and glutes. Medium compression for comfortable all-day wear.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+            </div>
+            <div class="shop-price-row">
+              <div><span class="shop-price"><span>$</span>120</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/SQ7HHYPJJSWQWNY27T3JGWLH" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20el%20Short%20Corto%20%24120%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 Short Guitarra -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <img src="images/fajas/short-guitarra.jpg" alt="Short Guitarra" loading="lazy" decoding="async" width="650" height="1126">
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s8.cat">Shapewear</span>
+            <h3 class="shop-name">Short Guitarra</h3>
+            <p class="shop-desc" data-i18n="s8.desc">Hourglass-shaped shorts with front closure. High waist, medium compression. Ideal for curvy figures.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span><span class="shop-size">XXL</span>
+            </div>
+            <div class="shop-price-row">
+              <div><span class="shop-price"><span>$</span>130</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/34VBGFZXX74ZRBSUTEHOWEJW" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20el%20Short%20Guitarra%20%24130%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 Cinturilla -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <img src="images/fajas/cinturilla.jpg" alt="Cinturilla Reductora" loading="lazy" decoding="async" width="650" height="1126">
+            <div class="shop-badge-wrap">
+              <span class="shop-badge hot" data-i18n="shop.badge.hot">Best Seller</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s9.cat">Waist Trainer</span>
+            <h3 class="shop-name">Cinturilla</h3>
+            <p class="shop-desc" data-i18n="s9.desc">High compression strapless cincher with 4-level hooks and diagonal back bones. Shapes abdomen and slims the figure.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span>
+            </div>
+            <div class="shop-price-row">
+              <div><span class="shop-price"><span>$</span>110</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/ZLNR67OX6HSMVSBPUFQYAV7A" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20la%20Cinturilla%20%24110%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 Cinturilla Deportiva -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <img src="images/fajas/cinturilla-deportiva.jpg" alt="Cinturilla Deportiva" loading="lazy" decoding="async" width="650" height="1126">
+            <div class="shop-badge-wrap">
+              <span class="shop-badge new" data-i18n="shop.badge.new">New</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s10.cat">Waist Trainer</span>
+            <h3 class="shop-name">Cinturilla Deportiva</h3>
+            <p class="shop-desc" data-i18n="s10.desc">Made for workouts. Latex inside for faster results, durable hooks. Increases heat concentration with the same effort.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span>
+            </div>
+            <div class="shop-price-row">
+              <div><span class="shop-price"><span>$</span>110</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/TAIJJRUKBQMCB6NKI2JZBOLY" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20la%20Cinturilla%20Deportiva%20%24110%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 Cinturilla Corsette -->
+        <div class="shop-card">
+          <div class="shop-img-wrap">
+            <img src="images/fajas/cinturilla-corsette.jpg" alt="Cinturilla Corsette" loading="lazy" decoding="async" width="650" height="1126">
+            <div class="shop-badge-wrap">
+              <span class="shop-badge new" data-i18n="shop.badge.new">New</span>
+            </div>
+          </div>
+          <div class="shop-body">
+            <span class="shop-category" data-i18n="s11.cat">Waist Trainer</span>
+            <h3 class="shop-name">Cinturilla Corsette</h3>
+            <p class="shop-desc" data-i18n="s11.desc">Designed for a more defined, flattering silhouette. Achieves a spectacular hourglass figure.</p>
+            <div class="shop-sizes">
+              <span class="shop-size">XS</span><span class="shop-size">S</span><span class="shop-size">M</span><span class="shop-size">L</span><span class="shop-size">XL</span>
+            </div>
+            <div class="shop-price-row">
+              <div><span class="shop-price"><span>$</span>130</span></div>
+              <div class="shop-btn-group"><a href="https://checkout.square.site/merchant/99PDMZKCD1ANH/checkout/DVK42MPDV3OSWXEF7MZW4FTB" class="shop-buy-btn" target="_blank" data-i18n="shop.buy">Buy Now</a><a href="https://wa.me/16197301320?text=Hola%20Tania!%20Me%20interesa%20la%20Cinturilla%20Corsette%20%24130%20%F0%9F%91%8D" class="shop-cart-btn" target="_blank" data-i18n="shop.ask">Ask About It</a></div>
             </div>
           </div>
         </div>
@@ -690,7 +706,7 @@
           <h3 data-i18n-html="shop.cta.h3">Not sure which <em>faja is right</em> for you?</h3>
           <p data-i18n="shop.cta.p">Message us on WhatsApp — we'll recommend the perfect style and size for your body, goals, and treatment plan.</p>
         </div>
-        <a href="https://wa.me/16194511398?text=Hi%20Tania!%20I%20need%20help%20choosing%20the%20right%20faja%20for%20me." class="btn btn-gold" target="_blank" data-i18n="shop.cta.btn">Chat with Us</a>
+        <a href="https://wa.me/16197301320?text=Hi%20Tania!%20I%20need%20help%20choosing%20the%20right%20faja%20for%20me." class="btn btn-gold" target="_blank" data-i18n="shop.cta.btn">Chat with Us</a>
       </div>
 
     </div>
@@ -701,46 +717,29 @@
     <div class="container">
       <p class="eyebrow text-center" data-i18n="booking.eyebrow">Ready to Transform?</p>
       <h2 class="text-center" data-i18n="booking.h2">Request Your Appointment</h2>
-      <p class="section-sub text-center" data-i18n-html="booking.sub">Send us a message and we will respond within <strong>24 hours</strong> to confirm your appointment date and time.</p>
+      <p class="section-sub text-center" data-i18n-html="booking.sub">Send us a message on WhatsApp and we will confirm your appointment date and time.</p>
 
       <div class="booking-contact-block">
-
-        <div class="booking-badges">
-          <div class="booking-badge">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.48 2 2 0 0 1 3.58 2.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.82a16 16 0 0 0 6.29 6.29l1.84-1.84a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span data-i18n="booking.badge1">We Reply Within 24 Hours</span>
-          </div>
-          <div class="booking-badge">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span data-i18n="booking.badge2">24-Hour Appointment Reminder</span>
-          </div>
-          <div class="booking-badge">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-i18n="booking.badge3">Free Consultation Included</span>
-          </div>
-        </div>
 
         <div class="booking-response-card">
           <div class="bi">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </div>
           <h3 data-i18n="booking.card.h3">Message Us to Book</h3>
-          <p data-i18n="booking.card.p">Ready to begin your transformation? Send us a WhatsApp or text message with your name, preferred dates, and which treatment you're interested in. We respond within 24 hours to confirm your spot.</p>
+          <p data-i18n="booking.card.p">Ready to begin your transformation? Send us a WhatsApp or text message with your name, preferred dates, and which treatment you're interested in. We respond to confirm your spot.</p>
 
           <div class="deposit-note">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <p data-i18n-html="booking.deposit"><strong>$10 Consultation Deposit Required</strong> — A small $10 deposit is collected to reserve your first appointment slot and consultation. This ensures your time is held just for you and goes toward your session balance. We'll send you payment instructions when we confirm your booking.</p>
+            <p data-i18n-html="booking.deposit">A <strong>$10 evaluation deposit</strong> is required to book your appointment. This $10 goes toward your first treatment — we will send you payment instructions when we confirm your booking.</p>
           </div>
 
           <div class="booking-cta-row">
-            <a href="https://wa.me/16194511398?text=Hi%20Tania!%20I%27d%20like%20to%20book%20an%20appointment%20at%20Tania%20Ayala%20Body%20Sculpting." class="btn btn-primary" target="_blank" data-i18n="booking.wa.btn">
+            <a href="https://wa.me/16197301320?text=Hi%20Tania!%20I%27d%20like%20to%20book%20an%20appointment%20at%20Tania%20Ayala%20Body%20Sculpting." class="btn btn-primary" target="_blank" data-i18n="booking.wa.btn">
               Message on WhatsApp
             </a>
             <a href="#contact" class="btn btn-outline" data-i18n="booking.contact.btn">See Contact Info</a>
           </div>
         </div>
-
-
       </div>
     </div>
   </section>
@@ -851,7 +850,7 @@
             </div>
             <div>
               <strong data-i18n="contact.phone.label">Phone &amp; WhatsApp</strong>
-              <p><a href="tel:+16194511398">(619) 451-1398</a></p>
+              <p><a href="tel:+16197301320">(619) 730-1320</a></p>
             </div>
           </div>
 
@@ -884,7 +883,7 @@
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               Tania Ayala Fajas Colombianas
             </a>
-            <a href="https://wa.me/16194511398" target="_blank" rel="noopener" class="social-link wa">
+            <a href="https://wa.me/16197301320" target="_blank" rel="noopener" class="social-link wa">
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
               WhatsApp
             </a>
@@ -910,9 +909,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-main">Tania Ayala</span>
-          <span class="logo-sub">Body Sculpting</span>
-          <p data-i18n="footer.desc">Gluteal sculpting, body molding, BBL recovery, Brazilian &amp; European lymphatic detox, anti-cellulite &amp; post-op care.</p>
+          <img src="images/logo-tania-gold.png" alt="Tania Ayala Body Sculpting" class="footer-logo-img" width="447" height="387" loading="lazy">
+          <p data-i18n="footer.desc">Wood therapy, manual body sculpting, Brazilian lymphatic drainage, post-op fibrosis care, glute lift, face &amp; jawline sculpting, and authentic Colombian fajas — Chula Vista, CA.</p>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.links">Quick Links</h4>
@@ -920,7 +918,6 @@
             <li><a href="#about" data-i18n="nav.about">About</a></li>
             <li><a href="#services" data-i18n="nav.services">Services</a></li>
             <li><a href="#care" data-i18n="nav.care">After Care</a></li>
-            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
             <li><a href="#shop" data-i18n="nav.shop">Spa Shop</a></li>
             <li><a href="#booking" data-i18n="nav.book">Book Now</a></li>
             <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
@@ -929,18 +926,17 @@
         <div class="footer-col">
           <h4 data-i18n="footer.services">Our Services</h4>
           <ul>
-            <li data-i18n="footer.s1">Lymphatic Drainage Massage</li>
+            <li data-i18n="footer.s1">Reductive Body Massage</li>
             <li data-i18n="footer.s2">Wood Body Sculpting</li>
-            <li data-i18n="footer.s3">Wood Cupping Therapy</li>
-            <li data-i18n="footer.s4">Deep Spot Sculpting</li>
-            <li data-i18n="footer.s5">Pre-Op Preparation</li>
-            <li data-i18n="footer.s6">Tummy Tuck Aftercare</li>
-            <li data-i18n="footer.s7">Breast Surgery Recovery</li>
+            <li data-i18n="footer.s3">Brazilian Lymphatic Drainage</li>
+            <li data-i18n="footer.s4">Post-Op Fibrosis Care</li>
+            <li data-i18n="footer.s5">Glute Lift &amp; Anti-Cellulite</li>
+            <li data-i18n="footer.s6">Face &amp; Jaw Line Sculpting</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p data-i18n="footer.copy">&copy; 2026 Tania Ayala Body Sculpting. All rights reserved.</p>
+        <p data-i18n="footer.copy">© 2026 Tania Ayala Body Sculpting. All rights reserved.</p>
         <p class="footer-music-credit">
           ♪ Ambient music by <a href="https://pixabay.com/users/mickeyscat-35308165/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=554494" target="_blank" rel="noopener">MickeysCat</a> via <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=554494" target="_blank" rel="noopener">Pixabay</a>
         </p>
@@ -960,10 +956,10 @@
   </audio>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/16194511398" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/16197301320" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 
-  <script src="script.js?v=22"></script>
+  <script src="script.js?v=43"></script>
 </body>
 </html>
