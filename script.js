@@ -36,7 +36,7 @@ const translations = {
 
     /* ── Hero ── */
     'hero.eyebrow':   'Máster Body Sculptor',
-    'hero.tagline':   'Wood Therapy · Metal Therapy · Drainage Massage · Brazilian Drainage<br>BBL Recovery · Anti‑Cellulite Massage · Face Sculpt · Body Detox · Post‑Operation',
+    'hero.tagline':   'Wood Therapy · Metal Therapy · Drainage Massage · Brazilian Lymphatic Drainage<br>BBL · Anti‑Cellulite Massage · Face Sculpt · Body Detox · Post‑Op Massage',
     'hero.btn.book':  'Request an Appointment',
     'hero.btn.explore':'Explore Services',
 
@@ -273,7 +273,7 @@ const translations = {
 
     /* ── Hero ── */
     'hero.eyebrow':    'Máster Body Sculptor',
-    'hero.tagline':    'Terapia de Madera · Terapia de Metal · Masaje de Drenaje · Drenaje Brasileño<br>Recuperación BBL · Masaje Anticelulitis · Escultura Facial · Detox Corporal · Post‑Operatorio',
+    'hero.tagline':    'Maderoterapia · Terapia de Metal · Masaje de Drenaje · Drenaje Linfático Brasileño<br>BBL · Masaje Anticelulítico · Escultura Facial · Detox Corporal · Masaje Post‑Operatorio',
     'hero.btn.book':   'Solicitar Cita',
     'hero.btn.explore':'Ver Servicios',
 
@@ -656,6 +656,7 @@ function initTreatmentVideos() {
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   videos.forEach(v => { v.muted = true; v.playsInline = true; });
+  initVideoSound(videos);
 
   if (reduceMotion) {
     videos.forEach(v => { v.controls = true; v.preload = 'metadata'; });
@@ -677,6 +678,32 @@ function initTreatmentVideos() {
     });
   }, { rootMargin: '200px 0px', threshold: 0.15 });
   videos.forEach(v => io.observe(v));
+}
+
+/* Videos start muted (browsers block autoplay with sound); the speaker
+   button turns sound on for one video at a time. */
+function initVideoSound(videos) {
+  const label = on => {
+    const es = document.documentElement.lang === 'es';
+    return on ? (es ? 'Silenciar' : 'Turn sound off') : (es ? 'Activar sonido' : 'Turn sound on');
+  };
+  const buttons = document.querySelectorAll('.video-sound');
+  const setState = (btn, on) => { btn.setAttribute('aria-pressed', on); btn.setAttribute('aria-label', label(on)); };
+  buttons.forEach(btn => {
+    const v = btn.closest('.media-frame').querySelector('video');
+    btn.addEventListener('click', () => {
+      const turnOn = v.muted;
+      buttons.forEach(b => setState(b, false));
+      videos.forEach(o => { o.muted = true; });
+      if (turnOn) {
+        v.muted = false; v.volume = 1;
+        const p = v.play(); if (p && p.catch) p.catch(() => {});
+        const music = document.getElementById('bgMusic');
+        if (music && !music.paused) toggleMusic();
+      }
+      setState(btn, turnOn);
+    });
+  });
 }
 
 /* ============================================================
