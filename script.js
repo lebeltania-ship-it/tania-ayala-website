@@ -89,7 +89,7 @@ const translations = {
     /* ── About ── */
     'about.eyebrow': 'Meet Your Specialist',
     'about.h2':      'Get the Body You Want — Naturally, Without Surgery',
-    'about.p1':      'With <strong>over 10 years of experience</strong>, <strong>Tania Ayala</strong> is a certified Máster Body Sculptor dedicated to helping you achieve the sexy, sculpted body you desire — <strong>100% naturally, without any procedures</strong>. Specializing in <strong>wood body sculpting</strong>, <strong>manual sculpting</strong>, <strong>face &amp; jawline sculpting</strong>, and <strong>Brazilian &amp; European lymphatic drainage</strong>, Tania has helped hundreds of clients transform their bodies and feel confident in their skin.',
+    'about.p1':      'With <strong>over 10 years of experience</strong>, <strong>Tania Ayala</strong> is a certified Máster Body Sculptor dedicated to helping you achieve the sexy, sculpted body you desire — <strong>100% naturally, without any invasive procedures</strong>. Specializing in <strong>wood body sculpting</strong>, <strong>manual sculpting</strong>, <strong>face &amp; jawline sculpting</strong>, and <strong>Brazilian &amp; European lymphatic drainage</strong>, Tania has helped hundreds of clients transform their bodies and feel confident in their skin.',
     'about.p2':      'Wood therapy breaks down stubborn fat, eliminates cellulite, tightens skin, and defines your curves. Lymphatic drainage flushes toxins, reduces inflammation, and accelerates healing from the inside out. Whether you want to reshape your body, lift your face, define your jawline, or recover from a BBL, lipo, or tummy tuck — Tania\'s personalized protocols deliver <strong>real, visible results</strong> that last.',
     'about.stat1':   'Happy Clients',
     'about.stat2':   'Years Experience',
@@ -329,7 +329,7 @@ const translations = {
     /* ── About ── */
     'about.eyebrow': 'Conoce a Tu Especialista',
     'about.h2':      'Consigue el Cuerpo que Deseas — Natural, Sin Cirugía',
-    'about.p1':      'Con <strong>más de 10 años de experiencia</strong>, <strong>Tania Ayala</strong> es una Máster Body Sculptor certificada dedicada a ayudarte a conseguir el cuerpo sexy y esculpido que deseas — <strong>100% natural, sin ningún procedimiento</strong>. Especializada en <strong>escultura corporal con madera</strong>, <strong>escultura manual</strong>, <strong>escultura facial y de mandíbula</strong> y <strong>drenaje linfático brasileño y europeo</strong>, Tania ha ayudado a cientos de clientes a transformar su cuerpo y sentirse seguras en su piel.',
+    'about.p1':      'Con <strong>más de 10 años de experiencia</strong>, <strong>Tania Ayala</strong> es una Máster Body Sculptor certificada dedicada a ayudarte a conseguir el cuerpo sexy y esculpido que deseas — <strong>100% natural, sin ningún procedimiento invasivo</strong>. Especializada en <strong>escultura corporal con madera</strong>, <strong>escultura manual</strong>, <strong>escultura facial y de mandíbula</strong> y <strong>drenaje linfático brasileño y europeo</strong>, Tania ha ayudado a cientos de clientes a transformar su cuerpo y sentirse seguras en su piel.',
     'about.p2':      'La terapia de madera elimina la grasa resistente, reduce la celulitis, tensa la piel y define tus curvas. El drenaje linfático elimina toxinas, reduce la inflamación y acelera la recuperación desde adentro. Ya sea que quieras remodelar tu cuerpo, levantar tu rostro, definir tu mandíbula o recuperarte de un BBL, lipo o abdominoplastia — los protocolos personalizados de Tania brindan <strong>resultados reales y visibles</strong> que perduran.',
     'about.stat1':   'Clientes Satisfechas',
     'about.stat2':   'Años de Experiencia',
@@ -673,6 +673,7 @@ function initTreatmentVideos() {
 
   videos.forEach(v => { v.muted = true; v.playsInline = true; });
   initVideoSound(videos);
+  if (reduceMotion) document.querySelectorAll('.promo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
   if (reduceMotion) {
     videos.forEach(v => { v.controls = true; v.preload = 'metadata'; });

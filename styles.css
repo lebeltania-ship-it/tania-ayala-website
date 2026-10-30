@@ -334,8 +334,8 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(3rem, 6vw, 6rem); align-items: center;
 }
-.promo-flyer img {
-  width: 100%; height: auto; display: block;
+.promo-flyer img, .promo-flyer video {
+  width: 100%; height: auto; display: block; aspect-ratio: auto; background: #2a120b;
   box-shadow: 0 30px 70px rgba(0,0,0,.45);
   outline: 1px solid rgba(244,191,196,.35); outline-offset: 10px;
 }
@@ -395,7 +395,7 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
     radial-gradient(ellipse at 5% 95%, rgba(170,60,25,.25) 0%, transparent 50%),
     linear-gradient(160deg, #4A190F 0%, #1F0C08 100%);
 }
-.promo-section--fall .promo-flyer img { outline-color: rgba(240,168,82,.45); }
+.promo-section--fall .promo-flyer img, .promo-section--fall .promo-flyer video { outline-color: rgba(240,168,82,.45); }
 .promo-section--fall .promo-bonus { background: rgba(240,168,82,.12); border-color: rgba(240,168,82,.5); }
 .promo-section--fall .promo-btn:hover { box-shadow: 0 10px 30px rgba(240,168,82,.3); }
 
