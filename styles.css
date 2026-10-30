@@ -386,6 +386,19 @@ p  { line-height: 1.85; color: var(--mid); font-size: .93rem; }
 .promo-btn:hover { background: var(--white); border-color: var(--white); color: #1a0e0c; box-shadow: 0 10px 30px rgba(244,191,196,.3); }
 .promo-valid { margin-top: 1rem; font-size: .72rem; letter-spacing: .08em; color: rgba(255,255,255,.5); }
 
+/* November / Thanksgiving variant: same layout, fall palette */
+.promo-section--fall {
+  --promo-pink: #F0A852;
+  --promo-pink-dk: #D9822F;
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(240,168,82,.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 5% 95%, rgba(170,60,25,.25) 0%, transparent 50%),
+    linear-gradient(160deg, #4A190F 0%, #1F0C08 100%);
+}
+.promo-section--fall .promo-flyer img { outline-color: rgba(240,168,82,.45); }
+.promo-section--fall .promo-bonus { background: rgba(240,168,82,.12); border-color: rgba(240,168,82,.5); }
+.promo-section--fall .promo-btn:hover { box-shadow: 0 10px 30px rgba(240,168,82,.3); }
+
 @media (max-width: 860px) {
   .promo-section { padding: 4.5rem 0; }
   .promo-grid { grid-template-columns: 1fr; gap: 3rem; }

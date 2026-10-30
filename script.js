@@ -12,12 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
 });
 
-/* Seasonal offers remove themselves once their end date passes */
+/* Seasonal offers show only between data-starts and data-expires.
+   Adding #<data-preview> to the URL shows an upcoming offer early. */
 function hideExpiredPromos() {
-  document.querySelectorAll('[data-expires]').forEach(el => {
-    const end = new Date(el.getAttribute('data-expires'));
-    if (!isNaN(end) && new Date() >= end) el.remove();
+  const now = new Date();
+  const hash = location.hash.replace('#', '');
+  document.querySelectorAll('[data-expires], [data-starts]').forEach(el => {
+    const start = el.dataset.starts ? new Date(el.dataset.starts) : null;
+    const end = el.dataset.expires ? new Date(el.dataset.expires) : null;
+    const previewing = el.dataset.preview && el.dataset.preview === hash;
+    const ended = end && !isNaN(end) && now >= end;
+    const notYet = start && !isNaN(start) && now < start && !previewing;
+    if (ended || notYet) el.remove();
   });
+  if (hash && document.querySelector(`[data-preview="${CSS.escape(hash)}"]`)) {
+    document.querySelectorAll('[data-expires]:not([data-preview])').forEach(el => el.remove());
+  }
 }
 
 /* ============================================================
@@ -60,6 +70,9 @@ const translations = {
     'promo.f3':          'Results from the first session',
     'promo.btn':         'Book the October Special',
     'promo.valid':       'Valid through October 31, 2026',
+    'promoNov.eyebrow':  'Thanksgiving Special · November Only',
+    'promoNov.btn':      'Book the November Special',
+    'promoNov.valid':    'Valid through November 30, 2026',
 
     /* ── Spotlight ── */
     'spot.lymph.label':  'Lymphatic<br>Drainage',
@@ -297,6 +310,9 @@ const translations = {
     'promo.f3':          'Resultados desde la primera sesión',
     'promo.btn':         'Reservar la Oferta de Octubre',
     'promo.valid':       'Válido hasta el 31 de octubre de 2026',
+    'promoNov.eyebrow':  'Especial de Thanksgiving · Solo en Noviembre',
+    'promoNov.btn':      'Reservar la Oferta de Noviembre',
+    'promoNov.valid':    'Válido hasta el 30 de noviembre de 2026',
 
     /* ── Spotlight ── */
     'spot.lymph.label':  'Drenaje<br>Linfático',
