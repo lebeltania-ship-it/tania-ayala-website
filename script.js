@@ -807,6 +807,14 @@ function initCarousel() {
    ============================================================ */
 const WA_NUMBER = '16197301320';
 
+/* One Square payment link per product + size, named e.g. "Faja Guitarra - Talla M",
+   so the size shows on Square's checkout and on the order Tania receives.
+   A product listed here goes straight to Square once a size is picked;
+   products not listed yet fall back to the 2-step dialog (Square + WhatsApp). */
+const SQUARE_SIZE_LINKS = {
+  // 'Faja Guitarra': { XS: 'https://checkout.square.site/...', S: '...', ... },
+};
+
 function shopText(key) {
   const lang = document.documentElement.getAttribute('lang') === 'es' ? 'es' : 'en';
   return (translations[lang] && translations[lang][key]) || translations.en[key] || '';
@@ -869,6 +877,8 @@ function initShop() {
     });
 
     buy.addEventListener('click', e => {
+      const sizeLink = size && (SQUARE_SIZE_LINKS[name] || {})[size];
+      if (sizeLink) { buy.href = sizeLink; return; } // opens Square with the size in the item name
       e.preventDefault();
       if (!size) {
         error.hidden = false;
