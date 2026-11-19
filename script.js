@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBeforeAfterSliders();
   initTreatmentVideos();
   initCarousel();
+  initShop();
   initLanguage();
 });
 
@@ -241,6 +242,18 @@ const translations = {
     'booking.card.p':     'Ready to begin your transformation? Send us a WhatsApp or text message with your name, preferred dates, and which treatment you\'re interested in. We respond to confirm your spot.',
     'booking.deposit':    'A <strong>$10 evaluation deposit</strong> is required to book your appointment. This $10 goes toward your first treatment — we will send you payment instructions when we confirm your booking.',
     'shop.shipping':      'All prices include shipping',
+    'shop.size.label':    'Choose your size',
+    'shop.size.error':    'Please choose your size first',
+    'order.eyebrow':      'Your Order',
+    'order.size':         'Size',
+    'order.price':        'Price · shipping included',
+    'order.s1.t':         'Pay securely with Square',
+    'order.s1.d':         'Card, Apple Pay, Cash App Pay or Afterpay. Opens in a new tab.',
+    'order.s2.t':         'Send us your size on WhatsApp',
+    'order.s2.d':         'One tap sends your item and size to Tania so we ship the right one.',
+    'order.pay':          'Pay with Square',
+    'order.wa':           'Send My Size on WhatsApp',
+    'order.close':        'Close',
     'booking.wa.btn':     'Message on WhatsApp',
     'booking.contact.btn':'See Contact Info',
 
@@ -481,6 +494,18 @@ const translations = {
     'booking.card.p':     '¿Lista para comenzar tu transformación? Envíanos un WhatsApp o mensaje de texto con tu nombre, fechas preferidas y el tratamiento que te interesa. Respondemos para confirmar tu lugar.',
     'booking.deposit':    'Se requiere un <strong>depósito de evaluación de $10</strong> para reservar tu cita. Estos $10 se aplican a tu primer tratamiento — te enviaremos instrucciones de pago cuando confirmemos tu reserva.',
     'shop.shipping':      'Todos los precios incluyen envío',
+    'shop.size.label':    'Elige tu talla',
+    'shop.size.error':    'Por favor elige tu talla primero',
+    'order.eyebrow':      'Tu Pedido',
+    'order.size':         'Talla',
+    'order.price':        'Precio · envío incluido',
+    'order.s1.t':         'Paga de forma segura con Square',
+    'order.s1.d':         'Tarjeta, Apple Pay, Cash App Pay o Afterpay. Se abre en una pestaña nueva.',
+    'order.s2.t':         'Envíanos tu talla por WhatsApp',
+    'order.s2.d':         'Con un toque le envías a Tania tu producto y talla para enviarte la correcta.',
+    'order.pay':          'Pagar con Square',
+    'order.wa':           'Enviar Mi Talla por WhatsApp',
+    'order.close':        'Cerrar',
     'booking.wa.btn':     'Escribir por WhatsApp',
     'booking.contact.btn':'Ver Información de Contacto',
 
@@ -772,4 +797,167 @@ function initCarousel() {
   });
 
   startAuto();
+}
+
+
+/* ============================================================
+   SHOP — size picker + order steps
+   Square payment links have no size field, so the size is chosen
+   here and sent to Tania on WhatsApp right after paying.
+   ============================================================ */
+const WA_NUMBER = '16197301320';
+
+function shopText(key) {
+  const lang = document.documentElement.getAttribute('lang') === 'es' ? 'es' : 'en';
+  return (translations[lang] && translations[lang][key]) || translations.en[key] || '';
+}
+
+function initShop() {
+  const cards = document.querySelectorAll('.shop-card');
+  if (!cards.length) return;
+  const modal = buildOrderModal();
+
+  cards.forEach(card => {
+    const sizesEl = card.querySelector('.shop-sizes');
+    const buy = card.querySelector('.shop-buy-btn');
+    const ask = card.querySelector('.shop-cart-btn');
+    if (!sizesEl || !buy) return;
+
+    const name = card.querySelector('.shop-name').textContent.trim();
+    const price = card.querySelector('.shop-price').textContent.replace(/\s+/g, '');
+    const squareUrl = buy.getAttribute('href');
+    const askText = ask ? decodeURIComponent((ask.getAttribute('href').split('text=')[1] || '')) : '';
+    let size = '';
+
+    const label = document.createElement('p');
+    label.className = 'shop-size-label';
+    label.innerHTML = '<span data-i18n="shop.size.label">Choose your size</span><strong class="shop-size-picked"></strong>';
+    sizesEl.before(label);
+
+    const error = document.createElement('p');
+    error.className = 'shop-size-error';
+    error.setAttribute('data-i18n', 'shop.size.error');
+    error.setAttribute('role', 'alert');
+    error.hidden = true;
+    error.textContent = 'Please choose your size first';
+    sizesEl.after(error);
+
+    sizesEl.setAttribute('role', 'group');
+    sizesEl.setAttribute('aria-label', name);
+    sizesEl.querySelectorAll('.shop-size').forEach(span => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'shop-size';
+      btn.textContent = span.textContent.trim();
+      btn.setAttribute('aria-pressed', 'false');
+      span.replaceWith(btn);
+    });
+
+    sizesEl.addEventListener('click', e => {
+      const btn = e.target.closest('.shop-size');
+      if (!btn) return;
+      size = btn.textContent;
+      sizesEl.querySelectorAll('.shop-size').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+      label.querySelector('.shop-size-picked').textContent = size;
+      card.classList.add('has-size');
+      card.classList.remove('needs-size');
+      error.hidden = true;
+      if (ask && askText) {
+        const withSize = askText.replace(/ \$(\d+)/, (m, n) => ' talla ' + size + ' $' + n);
+        ask.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(withSize);
+      }
+    });
+
+    buy.addEventListener('click', e => {
+      e.preventDefault();
+      if (!size) {
+        error.hidden = false;
+        card.classList.remove('needs-size');
+        void card.offsetWidth; // restart the nudge animation
+        card.classList.add('needs-size');
+        sizesEl.querySelector('.shop-size').focus({ preventScroll: true });
+        sizesEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        return;
+      }
+      modal.open({ name, size, price, squareUrl, opener: buy });
+    });
+  });
+}
+
+function buildOrderModal() {
+  const el = document.createElement('div');
+  el.className = 'order-modal';
+  el.hidden = true;
+  el.innerHTML = `
+    <div class="order-backdrop" data-close></div>
+    <div class="order-panel" role="dialog" aria-modal="true" aria-labelledby="orderTitle" tabindex="-1">
+      <button type="button" class="order-close" data-close aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <p class="order-eyebrow" data-i18n="order.eyebrow">Your Order</p>
+      <h3 class="order-title" id="orderTitle"></h3>
+      <dl class="order-lines">
+        <div><dt data-i18n="order.size">Size</dt><dd class="order-size"></dd></div>
+        <div><dt data-i18n="order.price">Price · shipping included</dt><dd class="order-price"></dd></div>
+      </dl>
+      <ol class="order-steps">
+        <li class="order-step" data-step="1"><span class="order-num">1</span><div><strong data-i18n="order.s1.t">Pay securely with Square</strong><span data-i18n="order.s1.d">Card, Apple Pay, Cash App Pay or Afterpay. Opens in a new tab.</span></div></li>
+        <li class="order-step" data-step="2"><span class="order-num">2</span><div><strong data-i18n="order.s2.t">Send us your size on WhatsApp</strong><span data-i18n="order.s2.d">One tap sends your item and size to Tania so we ship the right one.</span></div></li>
+      </ol>
+      <div class="order-actions">
+        <a class="order-btn order-pay" target="_blank" rel="noopener"><span data-i18n="order.pay">Pay with Square</span> <span class="order-pay-amt"></span></a>
+        <a class="order-btn order-wa" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.1 1.4z"/></svg><span data-i18n="order.wa">Send My Size on WhatsApp</span></a>
+      </div>
+    </div>`;
+  document.body.appendChild(el);
+
+  const panel = el.querySelector('.order-panel');
+  const pay = el.querySelector('.order-pay');
+  const wa = el.querySelector('.order-wa');
+  let opener = null;
+
+  function setStep(n) {
+    el.dataset.step = n;
+    el.querySelectorAll('.order-step').forEach(li => {
+      const s = Number(li.dataset.step);
+      li.classList.toggle('is-active', s === n);
+      li.classList.toggle('is-done', s < n);
+    });
+  }
+
+  function close() {
+    el.hidden = true;
+    document.body.classList.remove('order-open');
+    if (opener) opener.focus({ preventScroll: true });
+  }
+
+  el.addEventListener('click', e => { if (e.target.closest('[data-close]')) close(); });
+  document.addEventListener('keydown', e => {
+    if (el.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'Tab') {
+      const f = [...panel.querySelectorAll('button, a[href]')];
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+  pay.addEventListener('click', () => setStep(2));
+
+  return {
+    open({ name, size, price, squareUrl, opener: o }) {
+      opener = o;
+      el.querySelector('.order-title').textContent = name;
+      el.querySelector('.order-size').textContent = size;
+      el.querySelector('.order-price').textContent = price;
+      el.querySelector('.order-pay-amt').textContent = price;
+      el.querySelector('.order-close').setAttribute('aria-label', shopText('order.close'));
+      el.querySelectorAll('[data-i18n]').forEach(n => { const v = shopText(n.dataset.i18n); if (v) n.textContent = v; });
+      pay.href = squareUrl;
+      const msg = 'Hola Tania! Acabo de hacer mi pedido por Square: ' + name + ', talla ' + size + ' (' + price + '). Mi nombre es: ';
+      wa.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+      setStep(1);
+      el.hidden = false;
+      document.body.classList.add('order-open');
+      panel.focus({ preventScroll: true });
+    }
+  };
 }
